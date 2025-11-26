@@ -1,35 +1,131 @@
 <?php
-// Display success message if form was submitted
 $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 ?>
 <?php include 'includes/header.php'; ?>
 
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section" id="hero">
+  <div class="video-container">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="https://videos.pexels.com/video-files/3571085/3571085-hd_1920_1080_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+  
   <div class="container-fluid px-0">
     <div class="row g-0 align-items-center min-vh-100">
-      <!-- Text Content -->
-      <div class="col-lg-6 px-lg-5 px-4 py-5 hero-text">
-        <h1 class="display-3 fw-bold mb-3">Built for Restaurants, Built for Speed.</h1>
-        <p class="lead text-muted mb-4">The all-in-one POS platform designed to help you grow your business faster and smarter.</p>
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5">Get Started</a>
-          <button class="btn btn-outline-dark btn-lg rounded-pill px-5">Watch Video</button>
+      <!-- Animated Text Content -->
+      <div class="col-lg-6 px-lg-5 px-4 py-5 hero-text hero-text-animated">
+        <div class="animated-heading">
+          <h1 class="display-3 fw-bold mb-3">
+            <span class="text-line">Built for</span>
+            <span class="text-line">Restaurants,</span>
+            <span class="text-line">Built for</span>
+            <span class="text-line">Speed.</span>
+          </h1>
+        </div>
+        <p class="lead text-light mb-4 fade-in-text">The all-in-one POS platform designed to help you grow your business faster and smarter.</p>
+        <div class="d-flex gap-3 flex-wrap fade-in-text fade-in-delay">
+          <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 btn-hover">Get Started</a>
+          <button class="btn btn-outline-light btn-lg rounded-pill px-5 btn-hover-outline" onclick="openVideoFullscreen(event)">Watch Video</button>
         </div>
       </div>
-      
-      <!-- Hero Image -->
-      <div class="col-lg-6 d-none d-lg-block hero-image-container">
-        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&h=700&fit=crop" alt="POS Terminal" class="img-fluid">
+
+      <!-- Video Mockup - Desktop Only with Device Frame -->
+      <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center py-5 hero-image-wrapper">
+        <div class="mockup-container">
+          <div class="mockup-frame">
+            <!-- Device Frame with Orange Border -->
+            <div class="device-mockup tablet-mockup" onclick="openVideoFullscreen(event)">
+              <div class="device-frame">
+                <video 
+                  class="device-video" 
+                  autoplay 
+                  muted 
+                  loop 
+                  playsinline>
+                  <source src="https://videos.pexels.com/video-files/5632370/5632370-hd_1920_1080_30fps.mp4" type="video/mp4">
+                </video>
+              </div>
+              <!-- Device Notch (for tablet appearance) -->
+              <div class="device-notch"></div>
+              <!-- Play Button Overlay -->
+              <div class="play-button-overlay">
+                <div class="play-icon">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <span class="play-text">Meet QuickPOS in 90 seconds</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-shadow"></div>
+          <div class="mockup-glow"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Full Screen Video Modal -->
+<div id="videoFullscreen" class="video-fullscreen-modal">
+  <div class="video-fullscreen-close" onclick="closeVideoFullscreen()">&times;</div>
+  <div class="fullscreen-video-wrapper">
+    <video 
+      id="fullscreenVideoPlayer"
+      class="fullscreen-video" 
+      controls 
+      autoplay
+      playsinline>
+      <source src="https://videos.pexels.com/video-files/5632370/5632370-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- Video Modal (YouTube) -->
+<div id="videoModal" class="video-modal">
+  <div class="video-modal-content">
+    <span class="video-modal-close" onclick="document.getElementById('videoModal').style.display='none'">&times;</span>
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="QuickPOS Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- JavaScript for fullscreen video -->
+<script>
+function openVideoFullscreen(event) {
+  event.stopPropagation();
+  const modal = document.getElementById('videoFullscreen');
+  modal.style.display = 'flex';
+  const video = document.getElementById('fullscreenVideoPlayer');
+  setTimeout(() => video.play(), 100);
+}
+
+function closeVideoFullscreen() {
+  const modal = document.getElementById('videoFullscreen');
+  modal.style.display = 'none';
+  const video = document.getElementById('fullscreenVideoPlayer');
+  video.pause();
+}
+
+// Close on outside click
+document.getElementById('videoFullscreen')?.addEventListener('click', function(e) {
+  if (e.target === this) closeVideoFullscreen();
+});
+
+// Close on ESC key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeVideoFullscreen();
+  }
+});
+</script>
+
 <!-- Features Section -->
-<section class="features-section py-5">
+<section class="features-section py-5" id="features">
   <div class="container py-5">
-    <div class="text-center mb-5">
+    <div class="text-center mb-5 section-title">
       <h2 class="display-4 fw-bold mb-3">Everything you need to run your business</h2>
       <p class="lead text-muted">Comprehensive tools designed for modern restaurants and retail</p>
     </div>
@@ -37,7 +133,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
     <div class="row g-4">
       <!-- Feature Card 1 -->
       <div class="col-md-4">
-        <div class="feature-card h-100">
+        <div class="feature-card h-100 card-slide-up">
           <div class="feature-icon mb-4">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -51,7 +147,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 
       <!-- Feature Card 2 -->
       <div class="col-md-4">
-        <div class="feature-card h-100">
+        <div class="feature-card h-100 card-slide-up" style="animation-delay: 0.1s;">
           <div class="feature-icon mb-4">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="12" y1="2" x2="12" y2="22"></line>
@@ -65,7 +161,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 
       <!-- Feature Card 3 -->
       <div class="col-md-4">
-        <div class="feature-card h-100">
+        <div class="feature-card h-100 card-slide-up" style="animation-delay: 0.2s;">
           <div class="feature-icon mb-4">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="1"></circle>
@@ -81,8 +177,68 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
   </div>
 </section>
 
+<!-- Locations Section -->
+<section class="locations-section py-5" id="locations">
+  <div class="container py-5">
+    <div class="text-center mb-5 section-title">
+      <h2 class="display-4 fw-bold mb-3">We're in a business near you. 156,000* locations and counting.</h2>
+      <p class="lead text-muted">Trusted by thousands of restaurants, cafes, and retail businesses worldwide</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Location Card 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="location-card">
+          <video class="location-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/3194518/3194518-sd_640_360_24fps.mp4" type="video/mp4">
+          </video>
+          <div class="location-overlay">
+            <h5 class="location-title fw-bold">BREWERY</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="location-card" style="animation-delay: 0.1s;">
+          <video class="location-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_24fps.mp4" type="video/mp4">
+          </video>
+          <div class="location-overlay">
+            <h5 class="location-title fw-bold">CASUAL DINING</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="location-card" style="animation-delay: 0.2s;">
+          <video class="location-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/3194520/3194520-sd_640_360_24fps.mp4" type="video/mp4">
+          </video>
+          <div class="location-overlay">
+            <h5 class="location-title fw-bold">CAFE & BAKERY</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="location-card" style="animation-delay: 0.3s;">
+          <video class="location-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/3194521/3194521-sd_640_360_24fps.mp4" type="video/mp4">
+          </video>
+          <div class="location-overlay">
+            <h5 class="location-title fw-bold">FAST CASUAL</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Pricing Section -->
-<section class="pricing-section py-5 bg-light">
+<section class="pricing-section py-5 bg-light" id="pricing">
   <div class="container py-5">
     <div class="text-center mb-5">
       <h2 class="display-4 fw-bold mb-3">Simple, Transparent Pricing</h2>
@@ -158,45 +314,51 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section py-5">
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <!-- Contact Info -->
-      <div class="col-lg-6 mb-4 mb-lg-0 contact-info">
-        <h2 class="display-4 fw-bold mb-4">Let's schedule your free demo</h2>
-        <p class="lead text-muted mb-4">Want to know what QuickPOS can do for you? Get a personalized online demo, no credit card required.</p>
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-stretch">
+      <!-- Orange Left Side - Call to Action -->
+      <div class="col-lg-6 contact-left-side px-lg-5 px-4 py-5 d-flex flex-column justify-content-center">
+        <h2 class="display-5 fw-bold mb-4 text-white">Let's schedule your free demo</h2>
+        <p class="lead text-white mb-4">Want to know what QuickPOS can do for you? Get a personalized online demo, no credit card required.</p>
+        
         <div class="d-flex gap-4 flex-column">
           <div>
-            <h5 class="fw-bold mb-2">See QuickPOS in action</h5>
-            <p class="text-muted">Watch our product experts walk through features tailored to your business.</p>
+            <h5 class="fw-bold mb-2 text-white">See QuickPOS in action</h5>
+            <p class="text-white-50">Watch our product experts walk through features tailored to your business.</p>
           </div>
           <div>
-            <h5 class="fw-bold mb-2">Personalized consultation</h5>
-            <p class="text-muted">Get recommendations based on your specific business needs and operations.</p>
+            <h5 class="fw-bold mb-2 text-white">Personalized consultation</h5>
+            <p class="text-white-50">Get recommendations based on your specific business needs and operations.</p>
           </div>
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <div class="col-lg-6">
-        <form method="POST" action="contact-handler.php" class="contact-form">
+      <!-- White Right Side - Contact Form -->
+      <div class="col-lg-6 px-lg-5 px-4 py-5 d-flex align-items-center">
+        <form method="POST" action="contact-handler.php" class="contact-form w-100">
           <div class="mb-3">
-            <label for="name" class="form-label">First and Last Name</label>
+            <label for="name" class="form-label">First and last name*</label>
             <input type="text" class="form-control form-control-lg" id="name" name="name" required>
           </div>
 
           <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
+            <label for="email" class="form-label">Email address*</label>
             <input type="email" class="form-control form-control-lg" id="email" name="email" required>
           </div>
 
           <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
+            <label for="phone" class="form-label">Phone number*</label>
             <input type="tel" class="form-control form-control-lg" id="phone" name="phone" required>
           </div>
 
           <div class="mb-3">
-            <label for="business" class="form-label">Restaurant Name</label>
+            <label for="business" class="form-label">Restaurant name*</label>
             <input type="text" class="form-control form-control-lg" id="business" name="business" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="zipcode" class="form-label">Primary restaurant location zip code*</label>
+            <input type="text" class="form-control form-control-lg" id="zipcode" name="zipcode" required>
           </div>
 
           <div class="mb-4">
@@ -210,7 +372,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
             </select>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg w-100 py-3 rounded-pill">Schedule Demo</button>
+          <button type="submit" class="btn btn-primary btn-lg w-100 py-3 rounded-pill fw-bold">Get a Demo</button>
         </form>
       </div>
     </div>
