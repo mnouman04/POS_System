@@ -3,10 +3,8 @@
   <div class="container py-5">
     <!-- Section Header with Gradient -->
     <div class="text-center mb-5 section-title">
-      <h2 class="display-4 fw-bold mb-3 pricing-title-gradient">
-        <span class="title-word">Simple,</span>
-        <span class="title-word">Transparent</span>
-        <span class="title-word">Pricing</span>
+      <h2 class="display-4 fw-bold mb-3 pricing-title-brownish">
+        Simple, Transparent Pricing
       </h2>
       <p class="lead text-muted pricing-subtitle">Choose the perfect plan for your business needs</p>
     </div>
@@ -15,7 +13,7 @@
     <div class="row g-4 justify-content-center">
       <!-- Basic Plan -->
       <div class="col-lg-4 col-md-6">
-        <div class="pricing-card pricing-card-basic card-fade-in pricing-card-bordered">
+        <div class="pricing-card pricing-card-uniform card-fade-in">
           <!-- Icon Badge -->
           <div class="pricing-icon-badge basic-badge">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -64,13 +62,13 @@
             </li>
           </ul>
 
-          <button class="btn btn-pricing btn-pricing-basic w-100 py-3 fw-bold rounded-pill btn-pricing-hover" onclick="scrollToTop()">Get Started</button>
+          <button class="btn btn-pricing btn-pricing-uniform w-100 py-3 fw-bold rounded-pill" onclick="scrollToTop()">Get Started</button>
         </div>
       </div>
 
       <!-- Pro Plan (Featured) -->
       <div class="col-lg-4 col-md-6">
-        <div class="pricing-card pricing-card-pro pricing-card-featured card-fade-in pricing-card-bordered-orange" style="animation-delay: 0.1s;">
+        <div class="pricing-card pricing-card-uniform card-fade-in" style="animation-delay: 0.1s;">
           <!-- Badge -->
           <div class="pricing-badge">
             <span class="badge-text">⭐ RECOMMENDED</span>
@@ -125,13 +123,13 @@
             </li>
           </ul>
 
-          <button class="btn btn-pricing btn-pricing-pro w-100 py-3 fw-bold rounded-pill btn-pricing-hover" onclick="scrollToTop()">Get Started Now</button>
+          <button class="btn btn-pricing btn-pricing-uniform w-100 py-3 fw-bold rounded-pill" onclick="scrollToTop()">Get Started Now</button>
         </div>
       </div>
 
       <!-- Enterprise Plan -->
       <div class="col-lg-4 col-md-6">
-        <div class="pricing-card pricing-card-enterprise card-fade-in pricing-card-bordered-dark" style="animation-delay: 0.2s;">
+        <div class="pricing-card pricing-card-uniform card-fade-in" style="animation-delay: 0.2s;">
           <!-- Icon Badge -->
           <div class="pricing-icon-badge enterprise-badge">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -179,7 +177,7 @@
             </li>
           </ul>
 
-          <button class="btn btn-pricing btn-pricing-enterprise w-100 py-3 fw-bold rounded-pill btn-pricing-hover" onclick="scrollToTop()">Contact Sales</button>
+          <button class="btn btn-pricing btn-pricing-uniform w-100 py-3 fw-bold rounded-pill" onclick="scrollToTop()">Contact Sales</button>
         </div>
       </div>
     </div>
@@ -200,4 +198,12 @@ function scrollToTop() {
     behavior: 'smooth'
   });
 }
+
+// Animate heading text on load
+document.addEventListener('DOMContentLoaded', function() {
+  const heading = document.querySelector('.pricing-title-brownish');
+  if (heading) {
+    heading.style.animation = 'fadeInBrownish 0.8s ease-out forwards';
+  }
+});
 </script>
