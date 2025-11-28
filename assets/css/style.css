@@ -1200,7 +1200,7 @@ html {
     font-size: 0.95rem;
   }
 }
-
+// here adding javascript
 @media (max-width: 576px) {
   .location-card {
     height: 200px;
