@@ -7,7 +7,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 <section class="hero-section" id="hero">
   <div class="video-container">
     <video class="hero-video" autoplay muted loop playsinline>
-      <source src="https://videos.pexels.com/video-files/3571085/3571085-hd_1920_1080_30fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/3045163/3045163-sd_640_360_24fps.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="video-overlay"></div>
@@ -37,7 +37,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
         <div class="mockup-container">
           <div class="mockup-frame">
             <!-- Device Frame with Orange Border -->
-            <div class="device-mockup tablet-mockup" onclick="openVideoFullscreen(event)">
+            <div class="device-mockup tablet-mockup" onclick="openVideoFullscreen(event)" style="cursor: pointer;">
               <div class="device-frame">
                 <video 
                   class="device-video" 
@@ -69,7 +69,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
   </div>
 </section>
 
-<!-- Full Screen Video Modal -->
+<!-- Full Screen Video Modal with black background - no autoplay, user must click play -->
 <div id="videoFullscreen" class="video-fullscreen-modal">
   <div class="video-fullscreen-close" onclick="closeVideoFullscreen()">&times;</div>
   <div class="fullscreen-video-wrapper">
@@ -77,50 +77,11 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       id="fullscreenVideoPlayer"
       class="fullscreen-video" 
       controls 
-      autoplay
       playsinline>
       <source src="https://videos.pexels.com/video-files/5632370/5632370-hd_1920_1080_30fps.mp4" type="video/mp4">
     </video>
   </div>
 </div>
-
-<!-- Video Modal (YouTube) -->
-<div id="videoModal" class="video-modal">
-  <div class="video-modal-content">
-    <span class="video-modal-close" onclick="document.getElementById('videoModal').style.display='none'">&times;</span>
-    <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="QuickPOS Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<!-- JavaScript for fullscreen video -->
-<script>
-function openVideoFullscreen(event) {
-  event.stopPropagation();
-  const modal = document.getElementById('videoFullscreen');
-  modal.style.display = 'flex';
-  const video = document.getElementById('fullscreenVideoPlayer');
-  setTimeout(() => video.play(), 100);
-}
-
-function closeVideoFullscreen() {
-  const modal = document.getElementById('videoFullscreen');
-  modal.style.display = 'none';
-  const video = document.getElementById('fullscreenVideoPlayer');
-  video.pause();
-}
-
-// Close on outside click
-document.getElementById('videoFullscreen')?.addEventListener('click', function(e) {
-  if (e.target === this) closeVideoFullscreen();
-});
-
-// Close on ESC key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeVideoFullscreen();
-  }
-});
-</script>
 
 <!-- Features Section -->
 <section class="features-section py-5" id="features">
@@ -238,71 +199,7 @@ document.addEventListener('keydown', function(e) {
 </section>
 
 <!-- Pricing Section -->
-<section class="pricing-section py-5 bg-light" id="pricing">
-  <div class="container py-5">
-    <div class="text-center mb-5">
-      <h2 class="display-4 fw-bold mb-3">Simple, Transparent Pricing</h2>
-      <p class="lead text-muted">Choose the plan that fits your business needs</p>
-    </div>
-
-    <div class="row g-4 justify-content-center">
-      <!-- Basic Plan -->
-      <div class="col-lg-4">
-        <div class="pricing-card">
-          <h4 class="fw-bold mb-3">Basic</h4>
-          <div class="price-tag mb-4">
-            <span class="display-5 fw-bold">$29</span>
-            <span class="text-muted">/month</span>
-          </div>
-          <ul class="list-unstyled mb-4">
-            <li class="py-2 border-bottom"><strong>✓</strong> Basic POS Features</li>
-            <li class="py-2 border-bottom"><strong>✓</strong> Single Location</li>
-            <li class="py-2 border-bottom"><strong>✓</strong> Email Support</li>
-            <li class="py-2"><strong>✓</strong> Manual Reports</li>
-          </ul>
-          <button class="btn btn-outline-dark w-100 py-2">Get Started</button>
-        </div>
-      </div>
-
-      <!-- Pro Plan (Highlighted) -->
-      <div class="col-lg-4">
-        <div class="pricing-card pricing-card-featured">
-          <div class="badge bg-danger position-absolute top-0 start-50 translate-middle-x">RECOMMENDED</div>
-          <h4 class="fw-bold mb-3">Pro</h4>
-          <div class="price-tag mb-4">
-            <span class="display-5 fw-bold">$79</span>
-            <span class="text-muted">/month</span>
-          </div>
-          <ul class="list-unstyled mb-4">
-            <li class="py-2 border-bottom"><strong>✓</strong> All Basic Features</li>
-            <li class="py-2 border-bottom"><strong>✓</strong> Multi-Location</li>
-            <li class="py-2 border-bottom"><strong>✓</strong> Priority Support</li>
-            <li class="py-2"><strong>✓</strong> Advanced Analytics</li>
-          </ul>
-          <button class="btn btn-primary w-100 py-2">Get Started</button>
-        </div>
-      </div>
-
-      <!-- Enterprise Plan -->
-      <div class="col-lg-4">
-        <div class="pricing-card">
-          <h4 class="fw-bold mb-3">Enterprise</h4>
-          <div class="price-tag mb-4">
-            <span class="display-5 fw-bold">Custom</span>
-            <span class="text-muted">/month</span>
-          </div>
-          <ul class="list-unstyled mb-4">
-            <li class="py-2 border-bottom"><strong>✓</strong> Everything in Pro</li>
-            <li class="py-2 border-bottom"><strong>✓</strong> Unlimited Locations</li>
-            <li class="py-2 border-bottom"><strong>✓</strong> Dedicated Support</li>
-            <li class="py-2"><strong>✓</strong> Custom Integration</li>
-          </ul>
-          <button class="btn btn-outline-dark w-100 py-2">Contact Sales</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php include 'sections/pricing.php'; ?>
 
 <!-- Success Alert -->
 <?php if ($show_success): ?>
@@ -380,3 +277,49 @@ document.addEventListener('keydown', function(e) {
 </section>
 
 <?php include 'includes/footer.php'; ?>
+
+<script>
+function openVideoFullscreen(event) {
+  event.stopPropagation();
+  const modal = document.getElementById('videoFullscreen');
+  modal.style.display = 'flex';
+  
+  // Stop autoplay on small mockup video when fullscreen opens
+  const mockupVideo = document.querySelector('.device-video');
+  if (mockupVideo) {
+    mockupVideo.pause();
+  }
+  
+  const video = document.getElementById('fullscreenVideoPlayer');
+  setTimeout(() => {
+    // Fullscreen video does NOT autoplay - user must click play button
+    video.currentTime = 0;
+  }, 100);
+}
+
+function closeVideoFullscreen() {
+  const modal = document.getElementById('videoFullscreen');
+  modal.style.display = 'none';
+  const video = document.getElementById('fullscreenVideoPlayer');
+  video.pause();
+  video.currentTime = 0;
+  
+  // Resume autoplay on small mockup video when fullscreen closes
+  const mockupVideo = document.querySelector('.device-video');
+  if (mockupVideo) {
+    mockupVideo.play();
+  }
+}
+
+// Close on outside click
+document.getElementById('videoFullscreen')?.addEventListener('click', function(e) {
+  if (e.target === this) closeVideoFullscreen();
+});
+
+// Close on ESC key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeVideoFullscreen();
+  }
+});
+</script>
