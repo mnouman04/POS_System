@@ -6,13 +6,11 @@
     <meta name="description" content="QuickPOS - The all-in-one POS platform for restaurants and retail">
     <meta name="theme-color" content="#ff6200">
     <title>QuickPOS - Restaurant POS System</title>
-    
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -49,7 +47,7 @@
                         <a class="nav-link nav-link-hover" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary btn-nav text-white rounded-pill px-4 py-2 ms-lg-2 border-0" href="#contact">Get a Demo</a>
+                        <a class="nav-link btn btn-primary btn-nav rounded-pill px-4 py-2 ms-lg-2 border-0" href="#contact" style="background-color: #ff6200 !important; border-color: #ff6200 !important; color: white !important;">Get a Demo</a>
                     </li>
                 </ul>
             </div>
