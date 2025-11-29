@@ -1,4 +1,5 @@
 <?php
+// filepath: c:\Users\SAMEED\Downloads\quick-pos-landing-page\contact-handler.php
 session_start();
 header('Content-Type: application/json');
 
@@ -66,20 +67,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Store session data
+    // Store session data for thank you page
     $_SESSION['demo_name'] = $name;
     $_SESSION['demo_email'] = $email;
     $_SESSION['demo_business'] = $business;
     $_SESSION['demo_phone'] = $phone;
     $_SESSION['demo_type'] = $type;
+    $_SESSION['demo_date'] = date('F j, Y');
+    $_SESSION['demo_time'] = date('g:i A');
+
+    // Log the demo request to file (for production, use database)
+    $log_data = [
+        'timestamp' => date('Y-m-d H:i:s'),
+        'name' => $name,
+        'email' => $email,
+        'phone' => $phone,
+        'business' => $business,
+        'zipcode' => $zipcode,
+        'type' => $type
+    ];
+
+    // Create logs directory if it doesn't exist
+    if (!is_dir('logs')) {
+        mkdir('logs', 0755, true);
+    }
+
+    // Write to log file
+    $log_file = 'logs/demo_requests.log';
+    file_put_contents($log_file, json_encode($log_data) . "\n", FILE_APPEND);
 
     // TODO: In production
     // 1. Send confirmation email to user
-    // 2. Store data in database
-    // 3. Send notification to sales team
+    // Example:
+    // $to = $email;
+    // $subject = "Demo Scheduled - QuickPOS";
+    // $message = "Hi $name, Your demo has been scheduled for your $business restaurant.";
+    // $headers = "From: support@quickpos.com";
+    // mail($to, $subject, $message, $headers);
+    
+    // 2. Send notification to sales team
+    // $sales_email = "sales@quickpos.com";
+    // mail($sales_email, "New Demo Request", "Name: $name\nEmail: $email\nBusiness: $business");
 
     http_response_code(200);
-    echo json_encode(['success' => true, 'message' => 'Demo scheduled successfully']);
+    echo json_encode([
+        'success' => true, 
+        'message' => 'Demo scheduled successfully',
+        'data' => [
+            'name' => $name,
+            'email' => $email,
+            'business' => $business
+        ]
+    ]);
     exit;
 } else {
     http_response_code(405);

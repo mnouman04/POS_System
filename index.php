@@ -3,7 +3,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 ?>
 <?php include 'includes/header.php'; ?>
 
-<!-- Hero Section -->
+<!-- Enhanced Hero Section with Moving Effects -->
 <section class="hero-section" id="hero">
   <div class="video-container">
     <video class="hero-video" autoplay muted loop playsinline>
@@ -11,24 +11,49 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       Your browser does not support the video tag.
     </video>
     <div class="video-overlay"></div>
+    <!-- Floating particles effect -->
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
   </div>
   
   <div class="container-fluid px-0">
     <div class="row g-0 align-items-center min-vh-100">
-      <!-- Animated Text Content -->
+      <!-- Animated Text Content with Moving Effects -->
       <div class="col-lg-6 px-lg-5 px-4 py-5 hero-text hero-text-animated">
         <div class="animated-heading">
-          <h1 class="display-3 fw-bold mb-3">
-            <span class="text-line">Built for</span>
-            <span class="text-line">Restaurants,</span>
-            <span class="text-line">Built for</span>
-            <span class="text-line">Speed.</span>
+          <h1 class="display-3 fw-bold mb-3 hero-title-moving">
+            <span class="text-line text-slide-in">Built for</span>
+            <span class="text-line text-slide-in" style="animation-delay: 0.2s;">Restaurants,</span>
+            <span class="text-line text-slide-in" style="animation-delay: 0.4s;">Built for</span>
+            <span class="text-line text-slide-in text-highlight" style="animation-delay: 0.6s;">Speed.</span>
           </h1>
         </div>
-        <p class="lead text-light mb-4 fade-in-text">The all-in-one POS platform designed to help you grow your business faster and smarter.</p>
-        <div class="d-flex gap-3 flex-wrap fade-in-text fade-in-delay">
-          <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 btn-hover">Get Started</a>
+        <p class="lead text-light mb-4 fade-in-text hero-subtitle-moving">The all-in-one POS platform designed to help you grow your business faster and smarter.</p>
+        <div class="d-flex gap-3 flex-wrap fade-in-text fade-in-delay hero-cta-moving">
+          <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 btn-hover btn-pulse">Get Started</a>
           <button class="btn btn-outline-light btn-lg rounded-pill px-5 btn-hover-outline" onclick="openVideoFullscreen(event)">Watch Video</button>
+        </div>
+        <!-- Trust indicators -->
+        <div class="hero-trust-indicators mt-4">
+          <div class="d-flex gap-4 flex-wrap align-items-center">
+            <div class="trust-item">
+              <span class="trust-number">156K+</span>
+              <span class="trust-label">Active Users</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-number">4.9/5</span>
+              <span class="trust-label">Rating</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-number">24/7</span>
+              <span class="trust-label">Support</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -138,65 +163,437 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
   </div>
 </section>
 
-<!-- Locations Section -->
-<section class="locations-section py-5" id="locations">
+<!-- Platform Features Section -->
+<section class="platform-features-section py-5" id="platform-features">
   <div class="container py-5">
-    <div class="text-center mb-5 section-title">
-      <h2 class="display-4 fw-bold mb-3">We're in a business near you. 156,000* locations and counting.</h2>
-      <p class="lead text-muted">Trusted by thousands of restaurants, cafes, and retail businesses worldwide</p>
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold mb-3">Built for Reliability</h2>
+      <p class="lead text-muted">Enterprise-grade features that keep your business running smoothly</p>
     </div>
     
-    <div class="row g-4">
-      <!-- Location Card 1 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="location-card">
-          <video class="location-video" autoplay muted loop playsinline>
-            <source src="https://videos.pexels.com/video-files/3194518/3194518-sd_640_360_24fps.mp4" type="video/mp4">
-          </video>
-          <div class="location-overlay">
-            <h5 class="location-title fw-bold">BREWERY</h5>
+    <div class="row g-4 justify-content-center">
+      <!-- Connected Platform -->
+      <div class="col-lg-4 col-md-6">
+        <div class="platform-feature-card">
+          <div class="platform-feature-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              <path d="M16 16l-2-2 2-2"></path>
+              <path d="M12 18h.01"></path>
+            </svg>
+            <div class="icon-checkmark">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+              </svg>
+            </div>
           </div>
+          <h3 class="fw-bold mb-3">Connected Platform</h3>
+          <p class="text-muted">Accessible from the cloud, wherever you are.</p>
         </div>
       </div>
 
-      <!-- Location Card 2 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="location-card" style="animation-delay: 0.1s;">
-          <video class="location-video" autoplay muted loop playsinline>
-            <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_24fps.mp4" type="video/mp4">
-          </video>
-          <div class="location-overlay">
-            <h5 class="location-title fw-bold">CASUAL DINING</h5>
+      <!-- 24/7 Support -->
+      <div class="col-lg-4 col-md-6">
+        <div class="platform-feature-card">
+          <div class="platform-feature-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+              <path d="M21 3v5h-5"></path>
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+              <path d="M3 21v-5h5"></path>
+            </svg>
           </div>
+          <h3 class="fw-bold mb-3">24/7 Support</h3>
+          <p class="text-muted">Real people with real solutions, here when you need them.</p>
         </div>
       </div>
 
-      <!-- Location Card 3 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="location-card" style="animation-delay: 0.2s;">
-          <video class="location-video" autoplay muted loop playsinline>
-            <source src="https://videos.pexels.com/video-files/3194520/3194520-sd_640_360_24fps.mp4" type="video/mp4">
-          </video>
-          <div class="location-overlay">
-            <h5 class="location-title fw-bold">CAFE & BAKERY</h5>
+      <!-- Offline Mode -->
+      <div class="col-lg-4 col-md-6">
+        <div class="platform-feature-card">
+          <div class="platform-feature-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 1l22 22"></path>
+              <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+              <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+              <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+              <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+              <line x1="12" y1="20" x2="12.01" y2="20"></line>
+            </svg>
           </div>
+          <h3 class="fw-bold mb-3">Reliable Offline Mode</h3>
+          <p class="text-muted">Keeps your business running when the Wi-Fi isn't.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Location Card 4 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="location-card" style="animation-delay: 0.3s;">
-          <video class="location-video" autoplay muted loop playsinline>
-            <source src="https://videos.pexels.com/video-files/3194521/3194521-sd_640_360_24fps.mp4" type="video/mp4">
-          </video>
-          <div class="location-overlay">
-            <h5 class="location-title fw-bold">FAST CASUAL</h5>
+<!-- Business Types Section -->
+<section class="business-types-section py-5" id="business-types">
+  <div class="container-fluid px-0">
+    <div class="business-types-hero">
+      <div class="business-types-overlay"></div>
+      <div class="container py-5">
+        <div class="row align-items-center min-vh-75">
+          <div class="col-lg-12 text-center">
+            <h2 class="display-4 fw-bold mb-4 text-white business-types-title">Building customizable solutions for businesses of all flavors</h2>
+            <p class="lead text-white-50 mb-5 business-types-subtitle">See how we personalize for any service model or scale.</p>
+            
+            <div class="row g-3 justify-content-center">
+              <div class="col-lg-4 col-md-6">
+                <a href="#contact" class="business-type-btn">
+                  Full-Service Restaurants <span>→</span>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <a href="#contact" class="business-type-btn">
+                  Quick-Service Restaurants <span>→</span>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <a href="#contact" class="business-type-btn">
+                  Enterprise Businesses <span>→</span>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <a href="#contact" class="business-type-btn">
+                  Retail Businesses <span>→</span>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <a href="#contact" class="business-type-btn">
+                  Hybrid Businesses <span>→</span>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <a href="#contact" class="business-type-btn">
+                  New Businesses <span>→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Customer Success Section -->
+<section class="customer-success-section py-5" id="customer-success">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <div class="section-badge mb-3">
+        <span class="badge-pill">⭐ TRUSTED BY LEADERS</span>
+      </div>
+      <h2 class="display-4 fw-bold mb-3">
+        <span class="locations-title-animated">locations and counting</span>
+      </h2>
+      <p class="lead text-muted">Join thousands of successful businesses using QuickPOS</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Customer Card 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="customer-card">
+          <div class="customer-image brewery-image">
+            <div class="customer-overlay"></div>
+          </div>
+          <div class="customer-content">
+            <h4 class="customer-name">HARPOON</h4>
+            <span class="customer-type">BREWERY</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Card 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="customer-card">
+          <div class="customer-image dining-image">
+            <div class="customer-overlay"></div>
+          </div>
+          <div class="customer-content">
+            <h4 class="customer-name">odd duck</h4>
+            <span class="customer-type">CASUAL DINING</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Card 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="customer-card">
+          <div class="customer-image housepitality-image">
+            <div class="customer-overlay"></div>
+          </div>
+          <div class="customer-content">
+            <h4 class="customer-name">HOUSEPITALITY</h4>
+            <span class="customer-type-small">FAMILY</span>
+            <span class="customer-type">CASUAL DINING</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Card 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="customer-card">
+          <div class="customer-image taco-image">
+            <div class="customer-overlay"></div>
+          </div>
+          <div class="customer-content">
+            <h4 class="customer-name">VELVET TACO</h4>
+            <span class="customer-type">FAST CASUAL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Locations Section - Enhanced -->
+<section class="locations-section py-5" id="locations">
+  <div class="container py-5">
+    <!-- Section Header -->
+    <div class="text-center mb-5 section-title">
+      <div class="section-badge mb-3">
+        <span class="badge-pill">🌍 TRUSTED GLOBALLY</span>
+      </div>
+      <h2 class="display-4 fw-bold mb-3 locations-title-animated">
+        We're in a business near you
+      </h2>
+      <p class="lead text-muted locations-subtitle">
+        Trusted by thousands of restaurants, cafes, and retail businesses worldwide
+      </p>
+      <div class="locations-stats mt-4">
+        <div class="stat-item">
+          <h3 class="stat-number">156,000+</h3>
+          <p class="stat-label">Active Locations</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Location Cards Grid -->
+    <div class="row g-4">
+      <!-- Location Card 1: Brewery -->
+      <div class="col-lg-6 col-md-6">
+        <div class="location-card-enhanced">
+          <div class="location-card-wrapper">
+            <!-- Video Background -->
+            <div class="location-video-container">
+              <video 
+                class="location-video-enhanced" 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
+                <source src="https://videos.pexels.com/video-files/3194518/3194518-sd_640_360_24fps.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay-enhanced"></div>
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="location-content">
+              <div class="location-badge brewery-badge">
+                🍺 BREWERY
+              </div>
+              <h3 class="location-title-enhanced">Brewery & Bar</h3>
+              <p class="location-description">Perfect for craft beverage businesses with high-volume ordering</p>
+              
+              <div class="location-features">
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Multi-tap Management</span>
+                </div>
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Event Scheduling</span>
+                </div>
+              </div>
+
+              <a href="javascript:void(0)" class="btn-learn-more" onclick="playLocationVideo(event, 'brewery')">
+                <span>Watch Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 2: Casual Dining -->
+      <div class="col-lg-6 col-md-6">
+        <div class="location-card-enhanced">
+          <div class="location-card-wrapper">
+            <!-- Video Background -->
+            <div class="location-video-container">
+              <video 
+                class="location-video-enhanced" 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
+                <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_24fps.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay-enhanced"></div>
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="location-content">
+              <div class="location-badge dining-badge">
+                🍽️ CASUAL DINING
+              </div>
+              <h3 class="location-title-enhanced">Casual Dining</h3>
+              <p class="location-description">Streamline table management and order delivery</p>
+              
+              <div class="location-features">
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Table Reservations</span>
+                </div>
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Server Management</span>
+                </div>
+              </div>
+
+              <a href="javascript:void(0)" class="btn-learn-more" onclick="playLocationVideo(event, 'dining')">
+                <span>Watch Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 3: Cafe & Bakery -->
+      <div class="col-lg-6 col-md-6">
+        <div class="location-card-enhanced">
+          <div class="location-card-wrapper">
+            <!-- Video Background -->
+            <div class="location-video-container">
+              <video 
+                class="location-video-enhanced" 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
+                <source src="https://videos.pexels.com/video-files/3194520/3194520-sd_640_360_24fps.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay-enhanced"></div>
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="location-content">
+              <div class="location-badge cafe-badge">
+                ☕ CAFE & BAKERY
+              </div>
+              <h3 class="location-title-enhanced">Cafe & Bakery</h3>
+              <p class="location-description">Manage pastries, baked goods, and specialty beverages</p>
+              
+              <div class="location-features">
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Batch Tracking</span>
+                </div>
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Pre-orders</span>
+                </div>
+              </div>
+
+              <a href="javascript:void(0)" class="btn-learn-more" onclick="playLocationVideo(event, 'cafe')">
+                <span>Watch Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 4: Fast Casual -->
+      <div class="col-lg-6 col-md-6">
+        <div class="location-card-enhanced">
+          <div class="location-card-wrapper">
+            <!-- Video Background -->
+            <div class="location-video-container">
+              <video 
+                class="location-video-enhanced" 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
+                <source src="https://videos.pexels.com/video-files/3194521/3194521-sd_640_360_24fps.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay-enhanced"></div>
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="location-content">
+              <div class="location-badge fastcasual-badge">
+                ⚡ FAST CASUAL
+              </div>
+              <h3 class="location-title-enhanced">Fast Casual</h3>
+              <p class="location-description">Quick service with counter ordering and takeout focus</p>
+              
+              <div class="location-features">
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Quick Ordering</span>
+                </div>
+                <div class="feature">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  <span>Mobile Integration</span>
+                </div>
+              </div>
+
+              <a href="javascript:void(0)" class="btn-learn-more" onclick="playLocationVideo(event, 'fastcasual')">
+                <span>Watch Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location Video Modal -->
+<div id="locationVideoModal" class="location-video-modal" style="display: none;">
+  <div class="location-modal-close" onclick="closeLocationVideo()">&times;</div>
+  <div class="location-modal-content">
+    <video id="locationVideoPlayer" class="location-modal-video" controls playsinline>
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+</div>
 
 <!-- Pricing Section -->
 <?php include 'sections/pricing.php'; ?>
@@ -522,12 +919,19 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       // SUCCESS: Show both messages
       successMessage.style.display = 'block';
       
-      // Show green banner ONLY on successful submission
+      // Show green banner ONLY on successful submission (when ALL fields are filled and validated)
       if (successBanner) {
         document.getElementById('bannerTitle').textContent = '✓ Success!';
         document.getElementById('bannerMessage').textContent = ' Your demo request has been received. We\'ll contact you within 24 hours.';
         successBanner.style.display = 'block';
         successBanner.classList.add('banner-success-animation');
+        
+        // Auto-hide banner after 5 seconds
+        setTimeout(() => {
+          if (successBanner) {
+            successBanner.style.display = 'none';
+          }
+        }, 5000);
       }
       
       // Reset form
@@ -550,12 +954,10 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       
       document.getElementById('errorMessage').innerHTML = errorList;
       errorAlert.style.display = 'block';
-      
       // Make sure banner stays hidden
       if (successBanner) {
         successBanner.style.display = 'none';
       }
-      
       // Re-enable submit button
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnText;
@@ -572,7 +974,6 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       </div>
     `;
     errorAlert.style.display = 'block';
-    
     // Make sure banner stays hidden
     if (successBanner) {
       successBanner.style.display = 'none';
@@ -600,6 +1001,22 @@ document.getElementById('contactForm')?.querySelectorAll('input, select').forEac
       this.classList.remove('is-invalid');
     }
   });
+});
+
+// Navbar scroll effect
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar-glass');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 50) {
+    navbar?.classList.add('scrolled');
+  } else {
+    navbar?.classList.remove('scrolled');
+  }
+  
+  lastScroll = currentScroll;
 });
 </script>
 
