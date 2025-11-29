@@ -36,25 +36,9 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
         <p class="lead text-light mb-4 fade-in-text hero-subtitle-moving">The all-in-one POS platform designed to help you grow your business faster and smarter.</p>
         <div class="d-flex gap-3 flex-wrap fade-in-text fade-in-delay hero-cta-moving">
           <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 btn-hover btn-pulse">Get Started</a>
-          <button class="btn btn-outline-light btn-lg rounded-pill px-5 btn-hover-outline" onclick="openVideoFullscreen(event)">Watch Video</button>
         </div>
         <!-- Trust indicators -->
-        <div class="hero-trust-indicators mt-4">
-          <div class="d-flex gap-4 flex-wrap align-items-center">
-            <div class="trust-item">
-              <span class="trust-number">156K+</span>
-              <span class="trust-label">Active Users</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-number">4.9/5</span>
-              <span class="trust-label">Rating</span>
-            </div>
-            <div class="trust-item">
-              <span class="trust-number">24/7</span>
-              <span class="trust-label">Support</span>
-            </div>
-          </div>
-        </div>
+        <!-- Trust indicators removed -->
       </div>
 
       <!-- Enhanced Video Mockup with Image - Desktop Only -->
@@ -71,7 +55,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
                   loop 
                   playsinline
                   preload="auto">
-                  <source src="https://videos.pexels.com/video-files/5632370/5632370-hd_1920_1080_30fps.mp4" type="video/mp4">
+                  <source src=" https://cdn.pixabay.com/video/2020/03/24/34203-400954475_tiny.mp4 " type="video/mp4">
                 </video>
               </div>
               <!-- Device Notch (for tablet appearance) -->
@@ -308,7 +292,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
               loop 
               playsinline
               preload="auto">
-              <source src="https://videos.pexels.com/video-files/3194518/3194518-sd_640_360_24fps.mp4" type="video/mp4">
+              <source src="https://cdn.pixabay.com/video/2020/08/12/46989-449623829_tiny.mp4" type="video/mp4">
             </video>
             <div class="customer-overlay"></div>
           </div>
@@ -330,7 +314,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
               loop 
               playsinline
               preload="auto">
-              <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_24fps.mp4" type="video/mp4">
+              <source src="https://cdn.pixabay.com/video/2019/08/29/26373-357839133_tiny.mp4" type="video/mp4">
             </video>
             <div class="customer-overlay"></div>
           </div>
