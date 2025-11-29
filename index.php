@@ -336,13 +336,13 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
               loop 
               playsinline
               preload="auto">
-              <source src="https://videos.pexels.com/video-files/3194520/3194520-sd_640_360_24fps.mp4" type="video/mp4">
+              <source src=" https://cdn.pixabay.com/video/2016/02/29/2339-157269920_tiny.mp4" type="video/mp4">
             </video>
             <div class="customer-overlay"></div>
           </div>
           <div class="customer-content">
             <h4 class="customer-name">HOUSEPITALITY</h4>
-            <span class="customer-type-small">FAMILY</span>
+           
             <span class="customer-type">CASUAL DINING</span>
           </div>
         </div>
@@ -359,7 +359,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
               loop 
               playsinline
               preload="auto">
-              <source src="https://videos.pexels.com/video-files/3194521/3194521-sd_640_360_24fps.mp4" type="video/mp4">
+              <source src=" https://cdn.pixabay.com/video/2022/08/01/126334-735976704_tiny.mp4" type="video/mp4">
             </video>
             <div class="customer-overlay"></div>
           </div>
