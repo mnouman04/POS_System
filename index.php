@@ -90,11 +90,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
           <div class="mockup-shadow"></div>
           <div class="mockup-glow"></div>
           <!-- Additional Hero Image -->
-          <div class="hero-side-image">
-            <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                 alt="Restaurant POS System" 
-                 class="hero-decorative-image">
-          </div>
+          <!-- Additional Hero Image Removed -->
         </div>
       </div>
     </div>
@@ -746,20 +742,40 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 
           <!-- Contact Form (Toast Style) -->
           <form method="POST" action="contact-handler.php" class="contact-form-toast" id="contactForm" novalidate>
-            <!-- Full Name -->
-            <div class="form-group-toast mb-3">
-              <label for="name" class="form-label-toast">
-                First and last name<span class="text-danger">*</span>
-              </label>
-              <input 
-                type="text" 
-                class="form-control-toast" 
-                id="name" 
-                name="name" 
-                placeholder="First and last name"
-                required
-                autocomplete="name">
-              <div class="invalid-feedback-toast" id="nameError"></div>
+            <!-- Name Fields (Split) -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group-toast mb-3">
+                  <label for="first_name" class="form-label-toast">
+                    First Name<span class="text-danger">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    class="form-control-toast" 
+                    id="first_name" 
+                    name="first_name" 
+                    placeholder="First Name"
+                    required
+                    autocomplete="given-name">
+                  <div class="invalid-feedback-toast" id="firstNameError"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-toast mb-3">
+                  <label for="last_name" class="form-label-toast">
+                    Last Name<span class="text-danger">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    class="form-control-toast" 
+                    id="last_name" 
+                    name="last_name" 
+                    placeholder="Last Name"
+                    required
+                    autocomplete="family-name">
+                  <div class="invalid-feedback-toast" id="lastNameError"></div>
+                </div>
+              </div>
             </div>
 
             <!-- Email -->
