@@ -209,8 +209,8 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 </div>
 <?php endif; ?>
 
-<!-- Success Banner - Green Alert (Only shows on successful submission) -->
-<div id="successBanner" class="alert alert-success alert-dismissible fade show position-fixed top-0 start-0 end-0 m-3" role="alert" style="display: none; z-index: 9999; max-width: 600px; margin-left: auto !important; margin-right: auto !important; left: 50% !important; transform: translateX(-50%); border-radius: 12px;">
+<!-- Success Banner - Green Alert (ONLY shows on successful form submission) -->
+<div id="successBanner" class="alert alert-success alert-dismissible fade position-fixed top-0 start-0 end-0 m-3" role="alert" style="display: none !important; z-index: 9999; max-width: 600px; margin-left: auto !important; margin-right: auto !important; left: 50% !important; transform: translateX(-50%); border-radius: 12px;">
   <div class="d-flex align-items-center gap-2">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
@@ -487,7 +487,7 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// Contact Form Handler - Only show banner on SUCCESSFUL submission with ALL fields
+// Contact Form Handler - ONLY show banner on SUCCESSFUL submission with ALL fields
 document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
   e.preventDefault();
   
@@ -498,10 +498,12 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalBtnText = submitBtn.innerHTML;
   
-  // Hide previous messages - IMPORTANT: Don't show banner on error
+  // ALWAYS hide all messages at start
   errorAlert.style.display = 'none';
   successMessage.style.display = 'none';
-  successBanner.style.display = 'none';
+  if (successBanner) {
+    successBanner.style.display = 'none';
+  }
   
   // Disable submit button and show loading state
   submitBtn.disabled = true;
@@ -517,21 +519,20 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
     const data = await response.json();
     
     if (data.success) {
-      // Show success message in form
+      // SUCCESS: Show both messages
       successMessage.style.display = 'block';
       
-      // ONLY show green banner on successful submission with all fields filled
-      document.getElementById('bannerTitle').textContent = '✓ Success!';
-      document.getElementById('bannerMessage').textContent = ' Your demo request has been received. We\'ll contact you within 24 hours.';
-      successBanner.style.display = 'block';
-      
-      // Add animation to banner
-      successBanner.classList.add('banner-success-animation');
+      // Show green banner ONLY on successful submission
+      if (successBanner) {
+        document.getElementById('bannerTitle').textContent = '✓ Success!';
+        document.getElementById('bannerMessage').textContent = ' Your demo request has been received. We\'ll contact you within 24 hours.';
+        successBanner.style.display = 'block';
+        successBanner.classList.add('banner-success-animation');
+      }
       
       // Reset form
       form.reset();
       
-      // Log success
       console.log('Demo scheduled for:', data.data.name, data.data.email);
       
       // Redirect after 2 seconds
@@ -539,7 +540,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
         window.location.href = 'thank-you.html';
       }, 2000);
     } else {
-      // Show ONLY error alert - NO green banner
+      // ERROR: Show ONLY error alert - NO green banner
       const errorList = data.errors.map(err => `
         <div class="d-flex gap-2 align-items-start">
           <span>✕</span>
@@ -549,6 +550,11 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       
       document.getElementById('errorMessage').innerHTML = errorList;
       errorAlert.style.display = 'block';
+      
+      // Make sure banner stays hidden
+      if (successBanner) {
+        successBanner.style.display = 'none';
+      }
       
       // Re-enable submit button
       submitBtn.disabled = false;
@@ -566,6 +572,11 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       </div>
     `;
     errorAlert.style.display = 'block';
+    
+    // Make sure banner stays hidden
+    if (successBanner) {
+      successBanner.style.display = 'none';
+    }
     
     submitBtn.disabled = false;
     submitBtn.innerHTML = originalBtnText;
