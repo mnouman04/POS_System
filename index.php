@@ -209,7 +209,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 </div>
 <?php endif; ?>
 
-<!-- Success Banner - Green Alert -->
+<!-- Success Banner - Green Alert (Only shows on successful submission) -->
 <div id="successBanner" class="alert alert-success alert-dismissible fade show position-fixed top-0 start-0 end-0 m-3" role="alert" style="display: none; z-index: 9999; max-width: 600px; margin-left: auto !important; margin-right: auto !important; left: 50% !important; transform: translateX(-50%); border-radius: 12px;">
   <div class="d-flex align-items-center gap-2">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -237,19 +237,15 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
           </svg>
         </div>
 
-        <!-- Animated Main Heading with Letter Animation -->
-        <div class="contact-heading-container mb-4">
-          <h1 class="contact-main-heading text-white fw-bold">
-            <span class="heading-line">Schedule Your</span>
-            <span class="heading-line heading-highlight">Free Demo</span>
-            <span class="heading-line">Today</span>
-          </h1>
-        </div>
+        <!-- Professional Main Heading -->
+        <h1 class="contact-main-heading text-white fw-bold mb-4">
+          Schedule Your Free Demo
+        </h1>
 
-        <!-- Animated Subheading -->
-        <p class="contact-subheading text-white mb-5">Get a personalized walkthrough of QuickPOS tailored to your restaurant's needs. No credit card required.</p>
+        <!-- Professional Subheading -->
+        <p class="contact-subheading text-white mb-5">Experience how QuickPOS can transform your restaurant operations with our personalized walkthrough tailored to your business needs.</p>
         
-        <!-- Animated Benefits - Compact -->
+        <!-- Animated Benefits -->
         <div class="contact-benefits d-flex gap-3 flex-column mb-5">
           <div class="benefit-item benefit-item-1 py-3 px-4">
             <div class="benefit-icon" style="width: 40px; height: 40px; min-width: 40px;">
@@ -258,8 +254,8 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
               </svg>
             </div>
             <div>
-              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">See Features in Action</h6>
-              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Watch our experts demonstrate features tailored to your business.</p>
+              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Live Product Demo</h6>
+              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">See real-world features in action with our product specialists.</p>
             </div>
           </div>
 
@@ -270,8 +266,8 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
               </svg>
             </div>
             <div>
-              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Personalized Insights</h6>
-              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Get recommendations based on your specific restaurant operations.</p>
+              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Custom Strategy Session</h6>
+              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Get personalized recommendations based on your unique requirements.</p>
             </div>
           </div>
 
@@ -282,8 +278,8 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
               </svg>
             </div>
             <div>
-              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Risk-Free Trial</h6>
-              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">14-day free trial. Start whenever you're ready, no commitment.</p>
+              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">No Commitment Required</h6>
+              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Explore at your own pace with our 14-day free trial.</p>
             </div>
           </div>
         </div>
@@ -301,11 +297,10 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       <!-- White Right Side - Contact Form -->
       <div class="col-lg-7 px-lg-5 px-4 d-flex align-items-center justify-content-center" style="background: white; overflow-y: auto; max-height: 100vh;">
         <div class="contact-form-wrapper w-100">
-          <!-- Form Header with Animations -->
+          <!-- Form Header -->
           <div class="form-header mb-5">
-            <h2 class="form-title-animated fw-bold mb-2" style="font-size: 2rem;">Get Started Today</h2>
-            <div class="form-title-underline"></div>
-            <p class="form-subtitle-animated text-muted mt-3" style="font-size: 0.95rem;">Complete the form below and we'll reach out within 24 hours to schedule your demo</p>
+            <h2 class="form-title-animated fw-bold mb-3" style="font-size: 2.2rem;">Get Started Today</h2>
+            <p class="form-subtitle-animated text-muted" style="font-size: 0.95rem; line-height: 1.6;">Complete the form below and our team will reach out within 24 hours to schedule your personalized demo.</p>
           </div>
 
           <!-- Error Alert -->
@@ -466,7 +461,6 @@ function openVideoFullscreen(event) {
     video.currentTime = 0;
   }, 100);
 }
-
 function closeVideoFullscreen() {
   const modal = document.getElementById('videoFullscreen');
   modal.style.display = 'none';
@@ -493,7 +487,7 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// Contact Form Handler
+// Contact Form Handler - Only show banner on SUCCESSFUL submission with ALL fields
 document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
   e.preventDefault();
   
@@ -504,7 +498,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalBtnText = submitBtn.innerHTML;
   
-  // Hide previous messages
+  // Hide previous messages - IMPORTANT: Don't show banner on error
   errorAlert.style.display = 'none';
   successMessage.style.display = 'none';
   successBanner.style.display = 'none';
@@ -526,10 +520,13 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       // Show success message in form
       successMessage.style.display = 'block';
       
-      // Show green success banner at top
+      // ONLY show green banner on successful submission with all fields filled
       document.getElementById('bannerTitle').textContent = '✓ Success!';
-      document.getElementById('bannerMessage').textContent = ' Demo request received. Redirecting...';
+      document.getElementById('bannerMessage').textContent = ' Your demo request has been received. We\'ll contact you within 24 hours.';
       successBanner.style.display = 'block';
+      
+      // Add animation to banner
+      successBanner.classList.add('banner-success-animation');
       
       // Reset form
       form.reset();
@@ -542,7 +539,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
         window.location.href = 'thank-you.html';
       }, 2000);
     } else {
-      // Show errors
+      // Show ONLY error alert - NO green banner
       const errorList = data.errors.map(err => `
         <div class="d-flex gap-2 align-items-start">
           <span>✕</span>
