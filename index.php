@@ -209,68 +209,238 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 </div>
 <?php endif; ?>
 
-<!-- Contact Section -->
-<section id="contact" class="contact-section py-5">
+<!-- Success Banner - Green Alert -->
+<div id="successBanner" class="alert alert-success alert-dismissible fade show position-fixed top-0 start-0 end-0 m-3" role="alert" style="display: none; z-index: 9999; max-width: 600px; margin-left: auto !important; margin-right: auto !important; left: 50% !important; transform: translateX(-50%); border-radius: 12px;">
+  <div class="d-flex align-items-center gap-2">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+    </svg>
+    <div>
+      <strong id="bannerTitle">Success!</strong>
+      <span id="bannerMessage"> Your demo request has been received.</span>
+    </div>
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- Contact Section - Enhanced with Animations & Transitions -->
+<section id="contact" class="contact-section-optimized py-0">
   <div class="container-fluid px-0">
-    <div class="row g-0 align-items-stretch">
+    <div class="row g-0 align-items-stretch" style="min-height: 100vh;">
       <!-- Orange Left Side - Call to Action -->
-      <div class="col-lg-6 contact-left-side px-lg-5 px-4 py-5 d-flex flex-column justify-content-center">
-        <h2 class="display-5 fw-bold mb-4 text-white">Let's schedule your free demo</h2>
-        <p class="lead text-white mb-4">Want to know what QuickPOS can do for you? Get a personalized online demo, no credit card required.</p>
+      <div class="col-lg-5 contact-left-side-compact px-lg-4 px-3 d-flex flex-column justify-content-center">
+        <!-- Animated Icon Badge -->
+        <div class="contact-icon-badge mb-4">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+
+        <!-- Animated Main Heading with Letter Animation -->
+        <div class="contact-heading-container mb-4">
+          <h1 class="contact-main-heading text-white fw-bold">
+            <span class="heading-line">Schedule Your</span>
+            <span class="heading-line heading-highlight">Free Demo</span>
+            <span class="heading-line">Today</span>
+          </h1>
+        </div>
+
+        <!-- Animated Subheading -->
+        <p class="contact-subheading text-white mb-5">Get a personalized walkthrough of QuickPOS tailored to your restaurant's needs. No credit card required.</p>
         
-        <div class="d-flex gap-4 flex-column">
-          <div>
-            <h5 class="fw-bold mb-2 text-white">See QuickPOS in action</h5>
-            <p class="text-white-50">Watch our product experts walk through features tailored to your business.</p>
+        <!-- Animated Benefits - Compact -->
+        <div class="contact-benefits d-flex gap-3 flex-column mb-5">
+          <div class="benefit-item benefit-item-1 py-3 px-4">
+            <div class="benefit-icon" style="width: 40px; height: 40px; min-width: 40px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">See Features in Action</h6>
+              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Watch our experts demonstrate features tailored to your business.</p>
+            </div>
           </div>
-          <div>
-            <h5 class="fw-bold mb-2 text-white">Personalized consultation</h5>
-            <p class="text-white-50">Get recommendations based on your specific business needs and operations.</p>
+
+          <div class="benefit-item benefit-item-2 py-3 px-4">
+            <div class="benefit-icon" style="width: 40px; height: 40px; min-width: 40px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Personalized Insights</h6>
+              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Get recommendations based on your specific restaurant operations.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item benefit-item-3 py-3 px-4">
+            <div class="benefit-icon" style="width: 40px; height: 40px; min-width: 40px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Risk-Free Trial</h6>
+              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">14-day free trial. Start whenever you're ready, no commitment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="trust-indicators mt-auto">
+          <div class="d-flex gap-3 align-items-center trust-badges flex-wrap">
+            <span class="trust-badge-item">⭐ 4.9/5 Rating</span>
+            <span class="trust-badge-item">✓ 500+ Reviews</span>
+            <span class="trust-badge-item">🚀 156K+ Users</span>
           </div>
         </div>
       </div>
 
       <!-- White Right Side - Contact Form -->
-      <div class="col-lg-6 px-lg-5 px-4 py-5 d-flex align-items-center">
-        <form method="POST" action="contact-handler.php" class="contact-form w-100">
-          <div class="mb-3">
-            <label for="name" class="form-label">First and last name*</label>
-            <input type="text" class="form-control form-control-lg" id="name" name="name" required>
+      <div class="col-lg-7 px-lg-5 px-4 d-flex align-items-center justify-content-center" style="background: white; overflow-y: auto; max-height: 100vh;">
+        <div class="contact-form-wrapper w-100">
+          <!-- Form Header with Animations -->
+          <div class="form-header mb-5">
+            <h2 class="form-title-animated fw-bold mb-2" style="font-size: 2rem;">Get Started Today</h2>
+            <div class="form-title-underline"></div>
+            <p class="form-subtitle-animated text-muted mt-3" style="font-size: 0.95rem;">Complete the form below and we'll reach out within 24 hours to schedule your demo</p>
           </div>
 
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address*</label>
-            <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+          <!-- Error Alert -->
+          <div id="errorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; margin-bottom: 1.5rem; border-radius: 10px;">
+            <div id="errorMessage" style="font-size: 0.9rem;"></div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone number*</label>
-            <input type="tel" class="form-control form-control-lg" id="phone" name="phone" required>
-          </div>
+          <!-- Contact Form -->
+          <form method="POST" action="contact-handler.php" class="contact-form" id="contactForm" novalidate>
+            <!-- Row 1: Name & Email -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Full Name <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <span class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </span>
+                  <input type="text" class="form-control form-input-custom" 
+                    id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <small class="form-helper text-muted d-block">Your full name</small>
+              </div>
 
-          <div class="mb-3">
-            <label for="business" class="form-label">Restaurant name*</label>
-            <input type="text" class="form-control form-control-lg" id="business" name="business" required>
-          </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Email <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <span class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </span>
+                  <input type="email" class="form-control form-input-custom" 
+                    id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <small class="form-helper text-muted d-block">We'll never spam you</small>
+              </div>
+            </div>
 
-          <div class="mb-3">
-            <label for="zipcode" class="form-label">Primary restaurant location zip code*</label>
-            <input type="text" class="form-control form-control-lg" id="zipcode" name="zipcode" required>
-          </div>
+            <!-- Row 2: Phone & Business -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="phone" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Phone <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <span class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </span>
+                  <input type="tel" class="form-control form-input-custom" 
+                    id="phone" name="phone" placeholder="(123) 456-7890" required>
+                </div>
+                <small class="form-helper text-muted d-block">10+ digits</small>
+              </div>
 
-          <div class="mb-4">
-            <label for="type" class="form-label">Which best describes you?</label>
-            <select class="form-select form-select-lg" id="type" name="type" required>
-              <option value="">Select an option</option>
-              <option value="owner">Restaurant Owner</option>
-              <option value="manager">Manager</option>
-              <option value="operator">Operator</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+              <div class="col-md-6">
+                <label for="business" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Restaurant Name <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <span class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                  </span>
+                  <input type="text" class="form-control form-input-custom" 
+                    id="business" name="business" placeholder="Your Restaurant Name" required>
+                </div>
+                <small class="form-helper text-muted d-block">Business name</small>
+              </div>
+            </div>
 
-          <button type="submit" class="btn btn-primary btn-lg w-100 py-3 rounded-pill fw-bold">Get a Demo</button>
-        </form>
+            <!-- Row 3: Zipcode & Role -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label for="zipcode" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">ZIP Code <span class="text-danger">*</span></label>
+                <div class="input-wrapper">
+                  <span class="input-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </span>
+                  <input type="text" class="form-control form-input-custom" 
+                    id="zipcode" name="zipcode" placeholder="12345" required>
+                </div>
+                <small class="form-helper text-muted d-block">5 digits</small>
+              </div>
+
+              <div class="col-md-6">
+                <label for="type" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Your Role <span class="text-danger">*</span></label>
+                <div class="select-wrapper">
+                  <span class="select-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M7 10l5 5 5-5z"></path>
+                    </svg>
+                  </span>
+                  <select class="form-select form-select-custom" id="type" name="type" required>
+                    <option value="" selected disabled>Select your role...</option>
+                    <option value="owner">🏪 Restaurant Owner</option>
+                    <option value="manager">👔 Manager</option>
+                    <option value="operator">⚙️ Operator</option>
+                    <option value="other">💼 Other</option>
+                  </select>
+                </div>
+                <small class="form-helper text-muted d-block">Helps us tailor the demo</small>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-submit-custom w-100 py-3 fw-bold rounded-pill mb-3">
+              <span class="btn-text">Schedule My Free Demo</span>
+              <span class="btn-arrow ms-2">→</span>
+            </button>
+
+            <!-- Privacy Notice -->
+            <p class="text-center text-muted" style="font-size: 0.8rem;">
+              By submitting, you agree to our <a href="#" class="text-decoration-none text-primary fw-500">Terms of Service</a> and <a href="#" class="text-decoration-none text-primary fw-500">Privacy Policy</a>
+            </p>
+          </form>
+
+          <!-- Success Message -->
+          <div class="form-success-message" id="successMessage" style="display: none;">
+            <div class="success-icon" style="width: 56px; height: 56px; margin: 0 auto 1rem;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h6 class="fw-bold mb-1" style="font-size: 1rem;">Demo Scheduled!</h6>
+            <p class="mb-0" style="font-size: 0.9rem;">Redirecting to confirmation page...</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -322,4 +492,108 @@ document.addEventListener('keydown', function(e) {
     closeVideoFullscreen();
   }
 });
+
+// Contact Form Handler
+document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const form = this;
+  const errorAlert = document.getElementById('errorAlert');
+  const successMessage = document.getElementById('successMessage');
+  const successBanner = document.getElementById('successBanner');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.innerHTML;
+  
+  // Hide previous messages
+  errorAlert.style.display = 'none';
+  successMessage.style.display = 'none';
+  successBanner.style.display = 'none';
+  
+  // Disable submit button and show loading state
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<span class="btn-text">Processing...</span>';
+  
+  try {
+    const formData = new FormData(form);
+    const response = await fetch('contact-handler.php', {
+      method: 'POST',
+      body: formData
+    });
+    
+    const data = await response.json();
+    
+    if (data.success) {
+      // Show success message in form
+      successMessage.style.display = 'block';
+      
+      // Show green success banner at top
+      document.getElementById('bannerTitle').textContent = '✓ Success!';
+      document.getElementById('bannerMessage').textContent = ' Demo request received. Redirecting...';
+      successBanner.style.display = 'block';
+      
+      // Reset form
+      form.reset();
+      
+      // Log success
+      console.log('Demo scheduled for:', data.data.name, data.data.email);
+      
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        window.location.href = 'thank-you.html';
+      }, 2000);
+    } else {
+      // Show errors
+      const errorList = data.errors.map(err => `
+        <div class="d-flex gap-2 align-items-start">
+          <span>✕</span>
+          <span>${err}</span>
+        </div>
+      `).join('');
+      
+      document.getElementById('errorMessage').innerHTML = errorList;
+      errorAlert.style.display = 'block';
+      
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+      
+      // Scroll to error
+      errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    document.getElementById('errorMessage').innerHTML = `
+      <div class="d-flex gap-2 align-items-start">
+        <span>✕</span>
+        <span>An error occurred. Please try again.</span>
+      </div>
+    `;
+    errorAlert.style.display = 'block';
+    
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnText;
+    
+    errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+
+// Form validation on blur
+document.getElementById('contactForm')?.querySelectorAll('input, select').forEach(field => {
+  field.addEventListener('blur', function() {
+    if (!this.value.trim()) {
+      this.classList.add('is-invalid');
+    } else {
+      this.classList.remove('is-invalid');
+    }
+  });
+  
+  field.addEventListener('input', function() {
+    if (this.value.trim()) {
+      this.classList.remove('is-invalid');
+    }
+  });
+});
 </script>
+
+</body>
+</html>
