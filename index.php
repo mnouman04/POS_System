@@ -57,7 +57,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
         </div>
       </div>
 
-      <!-- Video Mockup - Desktop Only with Device Frame -->
+      <!-- Enhanced Video Mockup with Image - Desktop Only -->
       <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center py-5 hero-image-wrapper">
         <div class="mockup-container">
           <div class="mockup-frame">
@@ -69,14 +69,15 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
                   autoplay 
                   muted 
                   loop 
-                  playsinline>
+                  playsinline
+                  preload="auto">
                   <source src="https://videos.pexels.com/video-files/5632370/5632370-hd_1920_1080_30fps.mp4" type="video/mp4">
                 </video>
               </div>
               <!-- Device Notch (for tablet appearance) -->
               <div class="device-notch"></div>
-              <!-- Play Button Overlay -->
-              <div class="play-button-overlay">
+              <!-- Play Button Overlay - Hidden on autoplay, shown on hover -->
+              <div class="play-button-overlay play-overlay-hover">
                 <div class="play-icon">
                   <svg width="60" height="60" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1">
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -88,6 +89,12 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
           </div>
           <div class="mockup-shadow"></div>
           <div class="mockup-glow"></div>
+          <!-- Additional Hero Image -->
+          <div class="hero-side-image">
+            <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                 alt="Restaurant POS System" 
+                 class="hero-decorative-image">
+          </div>
         </div>
       </div>
     </div>
@@ -298,6 +305,15 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       <div class="col-lg-3 col-md-6">
         <div class="customer-card">
           <div class="customer-image brewery-image">
+            <video 
+              class="customer-video" 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              preload="auto">
+              <source src="https://videos.pexels.com/video-files/3194518/3194518-sd_640_360_24fps.mp4" type="video/mp4">
+            </video>
             <div class="customer-overlay"></div>
           </div>
           <div class="customer-content">
@@ -311,6 +327,15 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       <div class="col-lg-3 col-md-6">
         <div class="customer-card">
           <div class="customer-image dining-image">
+            <video 
+              class="customer-video" 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              preload="auto">
+              <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_24fps.mp4" type="video/mp4">
+            </video>
             <div class="customer-overlay"></div>
           </div>
           <div class="customer-content">
@@ -324,6 +349,15 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       <div class="col-lg-3 col-md-6">
         <div class="customer-card">
           <div class="customer-image housepitality-image">
+            <video 
+              class="customer-video" 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              preload="auto">
+              <source src="https://videos.pexels.com/video-files/3194520/3194520-sd_640_360_24fps.mp4" type="video/mp4">
+            </video>
             <div class="customer-overlay"></div>
           </div>
           <div class="customer-content">
@@ -338,6 +372,15 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       <div class="col-lg-3 col-md-6">
         <div class="customer-card">
           <div class="customer-image taco-image">
+            <video 
+              class="customer-video" 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              preload="auto">
+              <source src="https://videos.pexels.com/video-files/3194521/3194521-sd_640_360_24fps.mp4" type="video/mp4">
+            </video>
             <div class="customer-overlay"></div>
           </div>
           <div class="customer-content">
@@ -387,7 +430,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
                 loop 
                 playsinline
                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
-                <source src="https://videos.pexels.com/video-files/3194518/3194518-sd_640_360_24fps.mp4" type="video/mp4">
+                <source src="https://cdn.pixabay.com/video/2017/10/19/12513-240358867_large.mp4" type="video/mp4">
               </video>
               <div class="video-overlay-enhanced"></div>
             </div>
@@ -439,7 +482,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
                 loop 
                 playsinline
                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
-                <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_24fps.mp4" type="video/mp4">
+                <source src="https://cdn.pixabay.com/video/2022/11/24/140297-774837967_large.mp4 " type="video/mp4">
               </video>
               <div class="video-overlay-enhanced"></div>
             </div>
@@ -491,7 +534,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
                 loop 
                 playsinline
                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
-                <source src="https://videos.pexels.com/video-files/3194520/3194520-sd_640_360_24fps.mp4" type="video/mp4">
+                <source src=" https://cdn.pixabay.com/video/2024/12/12/246385_large.mp4" type="video/mp4">
               </video>
               <div class="video-overlay-enhanced"></div>
             </div>
@@ -543,7 +586,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
                 loop 
                 playsinline
                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E">
-                <source src="https://videos.pexels.com/video-files/3194521/3194521-sd_640_360_24fps.mp4" type="video/mp4">
+                <source src=" https://cdn.pixabay.com/video/2016/02/29/2339-157269920_tiny.mp4" type="video/mp4">
               </video>
               <div class="video-overlay-enhanced"></div>
             </div>
@@ -624,202 +667,183 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 <section id="contact" class="contact-section-optimized py-0">
   <div class="container-fluid px-0">
     <div class="row g-0 align-items-stretch" style="min-height: 100vh;">
-      <!-- Orange Left Side - Call to Action -->
-      <div class="col-lg-5 contact-left-side-compact px-lg-4 px-3 d-flex flex-column justify-content-center">
-        <!-- Animated Icon Badge -->
-        <div class="contact-icon-badge mb-4">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-        </div>
-
-        <!-- Professional Main Heading -->
-        <h1 class="contact-main-heading text-white fw-bold mb-4">
-          Schedule Your Free Demo
+      <!-- Orange Left Side - Call to Action (Toast Style) -->
+      <div class="col-lg-5 contact-left-side-toast px-lg-5 px-4 d-flex flex-column justify-content-center position-relative">
+        <!-- Circuit Pattern Overlay -->
+        <div class="toast-pattern-overlay"></div>
+        
+        <!-- Main Heading -->
+        <h1 class="contact-main-heading text-white fw-bold mb-3" style="font-size: 2.5rem; position: relative; z-index: 2;">
+          See QuickPOS in action
         </h1>
 
-        <!-- Professional Subheading -->
-        <p class="contact-subheading text-white mb-5">Experience how QuickPOS can transform your restaurant operations with our personalized walkthrough tailored to your business needs.</p>
+        <!-- Subheading -->
+        <p class="contact-subheading text-white mb-5" style="font-size: 1.1rem; line-height: 1.6; position: relative; z-index: 2;">
+          Want to know what QuickPOS can do for you? Get a personalized online demo, no credit card required.
+        </p>
         
-        <!-- Animated Benefits -->
-        <div class="contact-benefits d-flex gap-3 flex-column mb-5">
-          <div class="benefit-item benefit-item-1 py-3 px-4">
-            <div class="benefit-icon" style="width: 40px; height: 40px; min-width: 40px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-            </div>
-            <div>
-              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Live Product Demo</h6>
-              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">See real-world features in action with our product specialists.</p>
+        <!-- Award Badges (Toast Style) -->
+        <div class="toast-award-badges d-flex gap-3 flex-wrap mt-auto" style="position: relative; z-index: 2;">
+          <!-- Badge 1: Grid Leader -->
+          <div class="toast-award-badge badge-yellow">
+            <div class="badge-g2-icon">G2</div>
+            <div class="badge-content">
+              <div class="badge-season">SUMMER 2025</div>
+              <div class="badge-title">Grid Leader</div>
             </div>
           </div>
 
-          <div class="benefit-item benefit-item-2 py-3 px-4">
-            <div class="benefit-icon" style="width: 40px; height: 40px; min-width: 40px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-            </div>
-            <div>
-              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">Custom Strategy Session</h6>
-              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Get personalized recommendations based on your unique requirements.</p>
+          <!-- Badge 2: Fastest Implementation -->
+          <div class="toast-award-badge badge-blue">
+            <div class="badge-g2-icon">G2</div>
+            <div class="badge-content">
+              <div class="badge-season">SUMMER 2025</div>
+              <div class="badge-title">Fastest Implementation</div>
+              <div class="badge-subtitle">MID-MARKET</div>
             </div>
           </div>
 
-          <div class="benefit-item benefit-item-3 py-3 px-4">
-            <div class="benefit-icon" style="width: 40px; height: 40px; min-width: 40px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+          <!-- Badge 3: Momentum Leader -->
+          <div class="toast-award-badge badge-yellow">
+            <div class="badge-g2-icon">G2</div>
+            <div class="badge-content">
+              <div class="badge-season">SUMMER 2025</div>
+              <div class="badge-title">Momentum Leader</div>
             </div>
-            <div>
-              <h6 class="fw-bold mb-1 text-white" style="font-size: 0.95rem;">No Commitment Required</h6>
-              <p class="text-white-50 mb-0" style="font-size: 0.8rem;">Explore at your own pace with our 14-day free trial.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trust Indicators -->
-        <div class="trust-indicators mt-auto">
-          <div class="d-flex gap-3 align-items-center trust-badges flex-wrap">
-            <span class="trust-badge-item">⭐ 4.9/5 Rating</span>
-            <span class="trust-badge-item">✓ 500+ Reviews</span>
-            <span class="trust-badge-item">🚀 156K+ Users</span>
           </div>
         </div>
       </div>
 
-      <!-- White Right Side - Contact Form -->
-      <div class="col-lg-7 px-lg-5 px-4 d-flex align-items-center justify-content-center" style="background: white; overflow-y: auto; max-height: 100vh;">
-        <div class="contact-form-wrapper w-100">
-          <!-- Form Header -->
-          <div class="form-header mb-5">
-            <h2 class="form-title-animated fw-bold mb-3" style="font-size: 2.2rem;">Get Started Today</h2>
-            <p class="form-subtitle-animated text-muted" style="font-size: 0.95rem; line-height: 1.6;">Complete the form below and our team will reach out within 24 hours to schedule your personalized demo.</p>
+      <!-- White Right Side - Contact Form (Toast Style) -->
+      <div class="col-lg-7 px-lg-5 px-4 d-flex align-items-center justify-content-center position-relative" style="background: white; overflow-y: auto; max-height: 100vh;">
+        <!-- Pattern Extension from Left -->
+        <div class="toast-pattern-extension"></div>
+        
+        <div class="contact-form-wrapper w-100" style="max-width: 600px; position: relative; z-index: 2;">
+          <!-- Form Header with Icons -->
+          <div class="form-header-toast mb-4 d-flex justify-content-between align-items-start">
+            <h2 class="fw-bold mb-0" style="font-size: 1.75rem; color: #1a1a1a;">Let's schedule your free demo</h2>
+            <div class="form-control-icons d-flex gap-2">
+              <button type="button" class="form-icon-btn" aria-label="Minimize" title="Minimize">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+              <button type="button" class="form-icon-btn" aria-label="Close" title="Close">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <!-- Error Alert -->
-          <div id="errorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; margin-bottom: 1.5rem; border-radius: 10px;">
+          <div id="errorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; margin-bottom: 1.5rem; border-radius: 8px; border: 1px solid #dc3545;">
             <div id="errorMessage" style="font-size: 0.9rem;"></div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
-          <!-- Contact Form -->
-          <form method="POST" action="contact-handler.php" class="contact-form" id="contactForm" novalidate>
-            <!-- Row 1: Name & Email -->
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <label for="name" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Full Name <span class="text-danger">*</span></label>
-                <div class="input-wrapper">
-                  <span class="input-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </span>
-                  <input type="text" class="form-control form-input-custom" 
-                    id="name" name="name" placeholder="John Doe" required>
-                </div>
-                <small class="form-helper text-muted d-block">Your full name</small>
-              </div>
-
-              <div class="col-md-6">
-                <label for="email" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Email <span class="text-danger">*</span></label>
-                <div class="input-wrapper">
-                  <span class="input-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                    </svg>
-                  </span>
-                  <input type="email" class="form-control form-input-custom" 
-                    id="email" name="email" placeholder="john@example.com" required>
-                </div>
-                <small class="form-helper text-muted d-block">We'll never spam you</small>
-              </div>
+          <!-- Contact Form (Toast Style) -->
+          <form method="POST" action="contact-handler.php" class="contact-form-toast" id="contactForm" novalidate>
+            <!-- Full Name -->
+            <div class="form-group-toast mb-3">
+              <label for="name" class="form-label-toast">
+                First and last name<span class="text-danger">*</span>
+              </label>
+              <input 
+                type="text" 
+                class="form-control-toast" 
+                id="name" 
+                name="name" 
+                placeholder="First and last name"
+                required
+                autocomplete="name">
+              <div class="invalid-feedback-toast" id="nameError"></div>
             </div>
 
-            <!-- Row 2: Phone & Business -->
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <label for="phone" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Phone <span class="text-danger">*</span></label>
-                <div class="input-wrapper">
-                  <span class="input-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                  </span>
-                  <input type="tel" class="form-control form-input-custom" 
-                    id="phone" name="phone" placeholder="(123) 456-7890" required>
-                </div>
-                <small class="form-helper text-muted d-block">10+ digits</small>
-              </div>
-
-              <div class="col-md-6">
-                <label for="business" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Restaurant Name <span class="text-danger">*</span></label>
-                <div class="input-wrapper">
-                  <span class="input-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                  </span>
-                  <input type="text" class="form-control form-input-custom" 
-                    id="business" name="business" placeholder="Your Restaurant Name" required>
-                </div>
-                <small class="form-helper text-muted d-block">Business name</small>
-              </div>
+            <!-- Email -->
+            <div class="form-group-toast mb-3">
+              <label for="email" class="form-label-toast">
+                Email address<span class="text-danger">*</span>
+              </label>
+              <input 
+                type="email" 
+                class="form-control-toast" 
+                id="email" 
+                name="email" 
+                placeholder="Email address"
+                required
+                autocomplete="email">
+              <div class="invalid-feedback-toast" id="emailError"></div>
             </div>
 
-            <!-- Row 3: Zipcode & Role -->
-            <div class="row g-3 mb-4">
-              <div class="col-md-6">
-                <label for="zipcode" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">ZIP Code <span class="text-danger">*</span></label>
-                <div class="input-wrapper">
-                  <span class="input-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                  </span>
-                  <input type="text" class="form-control form-input-custom" 
-                    id="zipcode" name="zipcode" placeholder="12345" required>
-                </div>
-                <small class="form-helper text-muted d-block">5 digits</small>
-              </div>
+            <!-- Phone -->
+            <div class="form-group-toast mb-3">
+              <label for="phone" class="form-label-toast">
+                Phone number<span class="text-danger">*</span>
+              </label>
+              <input 
+                type="tel" 
+                class="form-control-toast" 
+                id="phone" 
+                name="phone" 
+                placeholder="Phone number"
+                required
+                autocomplete="tel">
+              <div class="invalid-feedback-toast" id="phoneError"></div>
+            </div>
 
-              <div class="col-md-6">
-                <label for="type" class="form-label fw-bold form-label-animated" style="font-size: 0.9rem;">Your Role <span class="text-danger">*</span></label>
-                <div class="select-wrapper">
-                  <span class="select-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M7 10l5 5 5-5z"></path>
-                    </svg>
-                  </span>
-                  <select class="form-select form-select-custom" id="type" name="type" required>
-                    <option value="" selected disabled>Select your role...</option>
-                    <option value="owner">🏪 Restaurant Owner</option>
-                    <option value="manager">👔 Manager</option>
-                    <option value="operator">⚙️ Operator</option>
-                    <option value="other">💼 Other</option>
-                  </select>
-                </div>
-                <small class="form-helper text-muted d-block">Helps us tailor the demo</small>
-              </div>
+            <!-- Restaurant Name -->
+            <div class="form-group-toast mb-3">
+              <label for="business" class="form-label-toast">
+                Restaurant name<span class="text-danger">*</span>
+              </label>
+              <input 
+                type="text" 
+                class="form-control-toast" 
+                id="business" 
+                name="business" 
+                placeholder="Restaurant name"
+                required>
+              <div class="invalid-feedback-toast" id="businessError"></div>
+            </div>
+
+            <!-- ZIP Code -->
+            <div class="form-group-toast mb-3">
+              <label for="zipcode" class="form-label-toast">
+                Primary restaurant location zip code<span class="text-danger">*</span>
+              </label>
+              <input 
+                type="text" 
+                class="form-control-toast" 
+                id="zipcode" 
+                name="zipcode" 
+                placeholder="Primary restaurant location zip code"
+                required
+                pattern="[0-9]{5}">
+              <div class="invalid-feedback-toast" id="zipcodeError"></div>
+            </div>
+
+            <!-- Role Dropdown -->
+            <div class="form-group-toast mb-4">
+              <label for="type" class="form-label-toast">
+                Which best describes you?<span class="text-danger">*</span>
+              </label>
+              <select class="form-control-toast" id="type" name="type" required>
+                <option value="" selected disabled>Which best describes you?</option>
+                <option value="owner">Restaurant Owner</option>
+                <option value="manager">Manager</option>
+                <option value="operator">Operator</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="invalid-feedback-toast" id="typeError"></div>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-submit-custom w-100 py-3 fw-bold rounded-pill mb-3">
-              <span class="btn-text">Schedule My Free Demo</span>
-              <span class="btn-arrow ms-2">→</span>
+            <button type="submit" class="btn btn-toast-demo w-100 py-3 fw-bold mb-3">
+              Get a Demo
             </button>
-
-            <!-- Privacy Notice -->
-            <p class="text-center text-muted" style="font-size: 0.8rem;">
-              By submitting, you agree to our <a href="#" class="text-decoration-none text-primary fw-500">Terms of Service</a> and <a href="#" class="text-decoration-none text-primary fw-500">Privacy Policy</a>
-            </p>
           </form>
 
           <!-- Success Message -->
@@ -893,7 +917,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
   const successMessage = document.getElementById('successMessage');
   const successBanner = document.getElementById('successBanner');
   const submitBtn = form.querySelector('button[type="submit"]');
-  const originalBtnText = submitBtn.innerHTML;
+  const originalBtnText = submitBtn.textContent;
   
   // ALWAYS hide all messages at start
   errorAlert.style.display = 'none';
@@ -904,7 +928,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
   
   // Disable submit button and show loading state
   submitBtn.disabled = true;
-  submitBtn.innerHTML = '<span class="btn-text">Processing...</span>';
+  submitBtn.textContent = 'Processing...';
   
   try {
     const formData = new FormData(form);
@@ -921,8 +945,8 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       
       // Show green banner ONLY on successful submission (when ALL fields are filled and validated)
       if (successBanner) {
-        document.getElementById('bannerTitle').textContent = '✓ Success!';
-        document.getElementById('bannerMessage').textContent = ' Your demo request has been received. We\'ll contact you within 24 hours.';
+        document.getElementById('bannerTitle').textContent = 'Success!';
+        document.getElementById('bannerMessage').textContent = ' Your response has been stored.';
         successBanner.style.display = 'block';
         successBanner.classList.add('banner-success-animation');
         
@@ -960,7 +984,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       }
       // Re-enable submit button
       submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
+      submitBtn.textContent = originalBtnText;
       
       // Scroll to error
       errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -980,29 +1004,131 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
     }
     
     submitBtn.disabled = false;
-    submitBtn.innerHTML = originalBtnText;
+    submitBtn.textContent = originalBtnText;
     
     errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 });
 
-// Form validation on blur
-document.getElementById('contactForm')?.querySelectorAll('input, select').forEach(field => {
-  field.addEventListener('blur', function() {
-    if (!this.value.trim()) {
-      this.classList.add('is-invalid');
-    } else {
-      this.classList.remove('is-invalid');
+// Enhanced Form Validation (Toast Style)
+const form = document.getElementById('contactForm');
+if (form) {
+  const fields = {
+    name: {
+      element: document.getElementById('name'),
+      error: document.getElementById('nameError'),
+      validate: (value) => {
+        if (!value.trim()) return 'First and last name is required';
+        if (value.trim().split(' ').length < 2) return 'Please enter your full name';
+        return '';
+      }
+    },
+    email: {
+      element: document.getElementById('email'),
+      error: document.getElementById('emailError'),
+      validate: (value) => {
+        if (!value.trim()) return 'Email address is required';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) return 'Please enter a valid email address';
+        return '';
+      }
+    },
+    phone: {
+      element: document.getElementById('phone'),
+      error: document.getElementById('phoneError'),
+      validate: (value) => {
+        if (!value.trim()) return 'Phone number is required';
+        const phoneClean = value.replace(/\D/g, '');
+        if (phoneClean.length < 10) return 'Phone number must have at least 10 digits';
+        return '';
+      }
+    },
+    business: {
+      element: document.getElementById('business'),
+      error: document.getElementById('businessError'),
+      validate: (value) => {
+        if (!value.trim()) return 'Restaurant name is required';
+        return '';
+      }
+    },
+    zipcode: {
+      element: document.getElementById('zipcode'),
+      error: document.getElementById('zipcodeError'),
+      validate: (value) => {
+        if (!value.trim()) return 'ZIP code is required';
+        const zipRegex = /^\d{5}(-\d{4})?$/;
+        if (!zipRegex.test(value)) return 'ZIP code must be 5 digits (e.g., 12345)';
+        return '';
+      }
+    },
+    type: {
+      element: document.getElementById('type'),
+      error: document.getElementById('typeError'),
+      validate: (value) => {
+        if (!value || value === '') return 'Please select which best describes you';
+        return '';
+      }
     }
-  });
-  
-  field.addEventListener('input', function() {
-    if (this.value.trim()) {
-      this.classList.remove('is-invalid');
-    }
-  });
-});
+  };
 
+  // Real-time validation on blur
+  Object.values(fields).forEach(({ element, error, validate }) => {
+    if (element) {
+      element.addEventListener('blur', function() {
+        const errorMsg = validate(this.value);
+        if (errorMsg) {
+          this.classList.add('is-invalid');
+          this.classList.remove('is-valid');
+          if (error) error.textContent = errorMsg;
+        } else if (this.value.trim()) {
+          this.classList.remove('is-invalid');
+          this.classList.add('is-valid');
+          if (error) error.textContent = '';
+        }
+      });
+
+      element.addEventListener('input', function() {
+        if (this.classList.contains('is-invalid')) {
+          const errorMsg = validate(this.value);
+          if (!errorMsg && this.value.trim()) {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            if (error) error.textContent = '';
+          }
+        }
+      });
+    }
+  });
+
+  // Validate all fields before submit
+  form.addEventListener('submit', function(e) {
+    let isValid = true;
+    Object.values(fields).forEach(({ element, error, validate }) => {
+      if (element) {
+        const errorMsg = validate(element.value);
+        if (errorMsg) {
+          element.classList.add('is-invalid');
+          element.classList.remove('is-valid');
+          if (error) error.textContent = errorMsg;
+          isValid = false;
+        } else if (element.value.trim()) {
+          element.classList.remove('is-invalid');
+          element.classList.add('is-valid');
+        }
+      }
+    });
+
+    if (!isValid) {
+      e.preventDefault();
+      // Scroll to first error
+      const firstError = form.querySelector('.is-invalid');
+      if (firstError) {
+        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstError.focus();
+      }
+    }
+  });
+}
 // Navbar scroll effect
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar-glass');
