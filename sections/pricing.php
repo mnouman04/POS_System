@@ -123,7 +123,7 @@
             </li>
           </ul>
 
-          <button class="btn btn-pricing btn-pricing-uniform btn-pricing-pro w-100 py-3 fw-bold rounded-pill" onclick="scrollToTop()">Get Started Now</button>
+          <button class="btn btn-pricing btn-pricing-uniform w-100 py-3 fw-bold rounded-pill" onclick="scrollToTop()">Get Started Now</button>
         </div>
       </div>
 
