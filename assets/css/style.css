@@ -1034,12 +1034,18 @@ body {
   font-weight: 500;
 }
 
-.price-note {
-  font-size: 0.85rem;
+// ...existing pricing styles...
+
+.price-note-custom {
+  font-size: 0.9rem;
   color: #FF6347;
-  font-weight: 600;
-  margin: 0.5rem 0 0 0;
+  font-weight: 500;
+  margin: 0.75rem 0 0 0;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
 }
+
+// ...existing code...
 
 .amount-custom {
   font-size: 1.8rem;
@@ -2921,7 +2927,7 @@ html {
 
 /* ===== ENHANCED FOOTER ===== */
 .footer {
- 
+
   color: #ffffff;
   position: relative;
 }
@@ -3351,11 +3357,13 @@ html {
 .footer a:active {
   opacity: 0.8;
 }
+
 /* Footer Specific Styles */
 .footer-heading-underline {
   position: relative;
   display: inline-block;
 }
+
 .footer-heading-underline::after {
   content: '';
   position: absolute;
@@ -3394,4 +3402,3 @@ html {
 .footer-heading-underline::after {
   background-color: #ff6200 !important;
 }
-
