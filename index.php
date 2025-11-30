@@ -643,54 +643,56 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 </div>
 
 <!-- Contact Section - Enhanced with Animations & Transitions -->
-<section id="contact" class="contact-section-optimized py-0">
-<!-- Contact Section - Clean & Static -->
-<section id="contact" class="contact-section py-5" style="background-color: #f8f9fa;">
-  <div class="container py-5">
-    <div class="row g-5 align-items-center">
-      <!-- Left Side: Content -->
-      <div class="col-lg-6">
-        <div class="contact-content pe-lg-5">
-          <h2 class="display-4 fw-bold mb-4 text-dark">See QuickPOS in action</h2>
-          <p class="lead text-muted mb-5">
-            Want to know what QuickPOS can do for you? Get a personalized online demo, no credit card required.
+<!-- Contact Section - Toast Style -->
+<section id="contact" class="contact-section py-0">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <!-- Left Side: Orange Background & Content -->
+      <div class="col-lg-6 bg-primary d-flex align-items-center justify-content-center p-5" style="background-color: #ff6200 !important; min-height: 100vh;">
+        <div class="contact-content text-center text-white p-lg-5">
+          <h2 class="display-4 fw-bold mb-4">See Toast in action</h2>
+          <p class="lead mb-5 fs-4">
+            Want to know what Toast can do for you?<br>
+            Get a personalized online demo, no credit card required.
           </p>
           
           <!-- Trust Badges -->
-          <div class="d-flex flex-wrap gap-3 mb-4">
-            <div class="badge-item bg-white p-3 rounded shadow-sm border d-flex align-items-center gap-3">
-              <div class="badge-icon text-danger fw-bold fs-4">G2</div>
-              <div class="badge-text">
-                <div class="small text-muted fw-bold">SUMMER 2025</div>
-                <div class="fw-bold text-dark">Grid Leader</div>
+          <div class="d-flex flex-wrap justify-content-center gap-3 mt-5">
+            <!-- Badge 1 -->
+            <div class="badge-item bg-white text-dark p-3 text-center shadow-sm" style="width: 140px; border-bottom: 4px solid #ff6200; clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);">
+              <div class="small fw-bold text-uppercase mb-2" style="font-size: 0.65rem; letter-spacing: 1px;">SUMMER 2025</div>
+              <div class="badge-icon text-danger fw-bold fs-4 mb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               </div>
+              <div class="fw-bold" style="font-size: 0.9rem; line-height: 1.2;">Grid Leader</div>
             </div>
             
-            <div class="badge-item bg-white p-3 rounded shadow-sm border d-flex align-items-center gap-3">
-              <div class="badge-icon text-danger fw-bold fs-4">G2</div>
-              <div class="badge-text">
-                <div class="small text-muted fw-bold">SUMMER 2025</div>
-                <div class="fw-bold text-dark">Fastest Implementation</div>
+            <!-- Badge 2 -->
+            <div class="badge-item bg-white text-dark p-3 text-center shadow-sm" style="width: 140px; border-bottom: 4px solid #007bff; clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);">
+              <div class="small fw-bold text-uppercase mb-2" style="font-size: 0.65rem; letter-spacing: 1px;">SUMMER 2025</div>
+              <div class="badge-icon text-danger fw-bold fs-4 mb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               </div>
+              <div class="fw-bold" style="font-size: 0.9rem; line-height: 1.2;">Fastest Implementation</div>
             </div>
 
-            <div class="badge-item bg-white p-3 rounded shadow-sm border d-flex align-items-center gap-3">
-              <div class="badge-icon text-danger fw-bold fs-4">G2</div>
-              <div class="badge-text">
-                <div class="small text-muted fw-bold">SUMMER 2025</div>
-                <div class="fw-bold text-dark">Momentum Leader</div>
+            <!-- Badge 3 -->
+            <div class="badge-item bg-white text-dark p-3 text-center shadow-sm" style="width: 140px; border-bottom: 4px solid #ffc107; clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);">
+              <div class="small fw-bold text-uppercase mb-2" style="font-size: 0.65rem; letter-spacing: 1px;">SUMMER 2025</div>
+              <div class="badge-icon text-danger fw-bold fs-4 mb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
               </div>
+              <div class="fw-bold" style="font-size: 0.9rem; line-height: 1.2;">Momentum Leader</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Right Side: Contact Form -->
-      <div class="col-lg-6">
-        <div class="contact-form-card bg-white p-4 p-md-5 rounded-4 shadow-lg border">
-          <div class="text-center mb-4">
-            <h3 class="fw-bold mb-2">Schedule your free demo</h3>
-            <p class="text-muted">Fill out the form below to get started</p>
+      <div class="col-lg-6 bg-white d-flex align-items-center justify-content-center p-5">
+        <div class="contact-form-card w-100" style="max-width: 550px;">
+          <div class="mb-4">
+            <h2 class="fw-bold mb-3 text-dark">Let's schedule your free demo</h2>
           </div>
 
           <!-- Error Alert -->
@@ -702,78 +704,77 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
           <form method="POST" action="contact-handler.php" id="contactForm" novalidate>
             <!-- Name Field -->
             <div class="mb-3">
-              <label for="name" class="form-label fw-bold">Full Name<span class="text-danger">*</span></label>
               <input 
                 type="text" 
-                class="form-control form-control-lg bg-light border-0" 
+                class="form-control form-control-lg border" 
                 id="name" 
                 name="name" 
-                placeholder="John Doe"
+                placeholder="First and last name*"
                 required
-                autocomplete="name">
+                autocomplete="name"
+                style="font-size: 0.95rem; padding: 0.8rem 1rem;">
               <div class="invalid-feedback" id="nameError"></div>
             </div>
 
             <!-- Email Field -->
             <div class="mb-3">
-              <label for="email" class="form-label fw-bold">Email Address<span class="text-danger">*</span></label>
               <input 
                 type="email" 
-                class="form-control form-control-lg bg-light border-0" 
+                class="form-control form-control-lg border" 
                 id="email" 
                 name="email" 
-                placeholder="john@restaurant.com"
+                placeholder="Email address*"
                 required
-                autocomplete="email">
+                autocomplete="email"
+                style="font-size: 0.95rem; padding: 0.8rem 1rem;">
               <div class="invalid-feedback" id="emailError"></div>
             </div>
 
             <!-- Phone Field -->
             <div class="mb-3">
-              <label for="phone" class="form-label fw-bold">Phone Number<span class="text-danger">*</span></label>
               <input 
                 type="tel" 
-                class="form-control form-control-lg bg-light border-0" 
+                class="form-control form-control-lg border" 
                 id="phone" 
                 name="phone" 
-                placeholder="(555) 123-4567"
+                placeholder="Phone number*"
                 required
-                autocomplete="tel">
+                autocomplete="tel"
+                style="font-size: 0.95rem; padding: 0.8rem 1rem;">
               <div class="invalid-feedback" id="phoneError"></div>
             </div>
 
             <!-- Restaurant Name -->
             <div class="mb-3">
-              <label for="business" class="form-label fw-bold">Restaurant Name<span class="text-danger">*</span></label>
               <input 
                 type="text" 
-                class="form-control form-control-lg bg-light border-0" 
+                class="form-control form-control-lg border" 
                 id="business" 
                 name="business" 
-                placeholder="My Awesome Restaurant"
-                required>
+                placeholder="Restaurant name*"
+                required
+                style="font-size: 0.95rem; padding: 0.8rem 1rem;">
               <div class="invalid-feedback" id="businessError"></div>
             </div>
 
             <!-- ZIP Code -->
             <div class="mb-3">
-              <label for="zipcode" class="form-label fw-bold">ZIP Code<span class="text-danger">*</span></label>
               <input 
                 type="text" 
-                class="form-control form-control-lg bg-light border-0" 
+                class="form-control form-control-lg border" 
                 id="zipcode" 
                 name="zipcode" 
-                placeholder="12345"
+                placeholder="Primary restaurant location zip code*"
                 required
-                pattern="[0-9]{5}">
+                pattern="[0-9]{5}"
+                style="font-size: 0.95rem; padding: 0.8rem 1rem;">
               <div class="invalid-feedback" id="zipcodeError"></div>
             </div>
 
             <!-- Role Dropdown -->
             <div class="mb-4">
-              <label for="type" class="form-label fw-bold">I am a...<span class="text-danger">*</span></label>
-              <select class="form-select form-select-lg bg-light border-0" id="type" name="type" required>
-                <option value="" selected disabled>Select your role</option>
+              <select class="form-select form-select-lg border" id="type" name="type" required style="font-size: 0.95rem; padding: 0.8rem 1rem; color: #6c757d;">
+                <option value="" selected disabled>Which best describes you?</option>
                 <option value="owner">Restaurant Owner</option>
                 <option value="manager">Manager</option>
                 <option value="operator">Operator</option>
@@ -783,7 +784,7 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow-sm hover-lift">
+            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow-sm" style="background-color: #2c56b9; border-color: #2c56b9;">
               Get a Demo
             </button>
           </form>
