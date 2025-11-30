@@ -20,7 +20,6 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
       <div class="particle"></div>
     </div>
   </div>
-  
   <div class="container-fluid px-0">
     <div class="row g-0 align-items-center min-vh-100">
       <!-- Animated Text Content with Moving Effects -->
@@ -645,216 +644,160 @@ $show_success = isset($_GET['status']) && $_GET['status'] === 'success';
 
 <!-- Contact Section - Enhanced with Animations & Transitions -->
 <section id="contact" class="contact-section-optimized py-0">
-  <div class="container-fluid px-0">
-    <div class="row g-0 align-items-stretch" style="min-height: 100vh;">
-      <!-- Orange Left Side - Call to Action (Toast Style) -->
-      <div class="col-lg-5 contact-left-side-toast px-lg-5 px-4 d-flex flex-column justify-content-center position-relative">
-        <!-- Circuit Pattern Overlay -->
-        <div class="toast-pattern-overlay"></div>
-        
-        <!-- Main Heading -->
-        <h1 class="contact-main-heading text-white fw-bold mb-3" style="font-size: 2.5rem; position: relative; z-index: 2;">
-          See QuickPOS in action
-        </h1>
-
-        <!-- Subheading -->
-        <p class="contact-subheading text-white mb-5" style="font-size: 1.1rem; line-height: 1.6; position: relative; z-index: 2;">
-          Want to know what QuickPOS can do for you? Get a personalized online demo, no credit card required.
-        </p>
-        
-        <!-- Award Badges (Toast Style) -->
-        <div class="toast-award-badges d-flex gap-3 flex-wrap mt-auto" style="position: relative; z-index: 2;">
-          <!-- Badge 1: Grid Leader -->
-          <div class="toast-award-badge badge-yellow">
-            <div class="badge-g2-icon">G2</div>
-            <div class="badge-content">
-              <div class="badge-season">SUMMER 2025</div>
-              <div class="badge-title">Grid Leader</div>
+<!-- Contact Section - Clean & Static -->
+<section id="contact" class="contact-section py-5" style="background-color: #f8f9fa;">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <!-- Left Side: Content -->
+      <div class="col-lg-6">
+        <div class="contact-content pe-lg-5">
+          <h2 class="display-4 fw-bold mb-4 text-dark">See QuickPOS in action</h2>
+          <p class="lead text-muted mb-5">
+            Want to know what QuickPOS can do for you? Get a personalized online demo, no credit card required.
+          </p>
+          
+          <!-- Trust Badges -->
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <div class="badge-item bg-white p-3 rounded shadow-sm border d-flex align-items-center gap-3">
+              <div class="badge-icon text-danger fw-bold fs-4">G2</div>
+              <div class="badge-text">
+                <div class="small text-muted fw-bold">SUMMER 2025</div>
+                <div class="fw-bold text-dark">Grid Leader</div>
+              </div>
             </div>
-          </div>
-
-          <!-- Badge 2: Fastest Implementation -->
-          <div class="toast-award-badge badge-blue">
-            <div class="badge-g2-icon">G2</div>
-            <div class="badge-content">
-              <div class="badge-season">SUMMER 2025</div>
-              <div class="badge-title">Fastest Implementation</div>
-              <div class="badge-subtitle">MID-MARKET</div>
+            
+            <div class="badge-item bg-white p-3 rounded shadow-sm border d-flex align-items-center gap-3">
+              <div class="badge-icon text-danger fw-bold fs-4">G2</div>
+              <div class="badge-text">
+                <div class="small text-muted fw-bold">SUMMER 2025</div>
+                <div class="fw-bold text-dark">Fastest Implementation</div>
+              </div>
             </div>
-          </div>
 
-          <!-- Badge 3: Momentum Leader -->
-          <div class="toast-award-badge badge-yellow">
-            <div class="badge-g2-icon">G2</div>
-            <div class="badge-content">
-              <div class="badge-season">SUMMER 2025</div>
-              <div class="badge-title">Momentum Leader</div>
+            <div class="badge-item bg-white p-3 rounded shadow-sm border d-flex align-items-center gap-3">
+              <div class="badge-icon text-danger fw-bold fs-4">G2</div>
+              <div class="badge-text">
+                <div class="small text-muted fw-bold">SUMMER 2025</div>
+                <div class="fw-bold text-dark">Momentum Leader</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- White Right Side - Contact Form (Toast Style) -->
-      <div class="col-lg-7 px-lg-5 px-4 d-flex align-items-center justify-content-center position-relative" style="background: white; overflow-y: auto; max-height: 100vh;">
-        <!-- Pattern Extension from Left -->
-        <div class="toast-pattern-extension"></div>
-        
-        <div class="contact-form-wrapper w-100" style="max-width: 600px; position: relative; z-index: 2;">
-          <!-- Form Header with Icons -->
-          <div class="form-header-toast mb-4 d-flex justify-content-between align-items-start">
-            <h2 class="fw-bold mb-0" style="font-size: 1.75rem; color: #1a1a1a;">Let's schedule your free demo</h2>
-            <div class="form-control-icons d-flex gap-2">
-              <button type="button" class="form-icon-btn" aria-label="Minimize" title="Minimize">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </button>
-              <button type="button" class="form-icon-btn" aria-label="Close" title="Close">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
-            </div>
+      <!-- Right Side: Contact Form -->
+      <div class="col-lg-6">
+        <div class="contact-form-card bg-white p-4 p-md-5 rounded-4 shadow-lg border">
+          <div class="text-center mb-4">
+            <h3 class="fw-bold mb-2">Schedule your free demo</h3>
+            <p class="text-muted">Fill out the form below to get started</p>
           </div>
 
           <!-- Error Alert -->
-          <div id="errorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none; margin-bottom: 1.5rem; border-radius: 8px; border: 1px solid #dc3545;">
-            <div id="errorMessage" style="font-size: 0.9rem;"></div>
+          <div id="errorAlert" class="alert alert-danger alert-dismissible fade" role="alert" style="display: none;">
+            <div id="errorMessage"></div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
-          <!-- Contact Form (Toast Style) -->
-          <form method="POST" action="contact-handler.php" class="contact-form-toast" id="contactForm" novalidate>
-            <!-- Name Fields (Split) -->
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group-toast mb-3">
-                  <label for="first_name" class="form-label-toast">
-                    First Name<span class="text-danger">*</span>
-                  </label>
-                  <input 
-                    type="text" 
-                    class="form-control-toast" 
-                    id="first_name" 
-                    name="first_name" 
-                    placeholder="First Name"
-                    required
-                    autocomplete="given-name">
-                  <div class="invalid-feedback-toast" id="firstNameError"></div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group-toast mb-3">
-                  <label for="last_name" class="form-label-toast">
-                    Last Name<span class="text-danger">*</span>
-                  </label>
-                  <input 
-                    type="text" 
-                    class="form-control-toast" 
-                    id="last_name" 
-                    name="last_name" 
-                    placeholder="Last Name"
-                    required
-                    autocomplete="family-name">
-                  <div class="invalid-feedback-toast" id="lastNameError"></div>
-                </div>
-              </div>
+          <form method="POST" action="contact-handler.php" id="contactForm" novalidate>
+            <!-- Name Field -->
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bold">Full Name<span class="text-danger">*</span></label>
+              <input 
+                type="text" 
+                class="form-control form-control-lg bg-light border-0" 
+                id="name" 
+                name="name" 
+                placeholder="John Doe"
+                required
+                autocomplete="name">
+              <div class="invalid-feedback" id="nameError"></div>
             </div>
 
-            <!-- Email -->
-            <div class="form-group-toast mb-3">
-              <label for="email" class="form-label-toast">
-                Email address<span class="text-danger">*</span>
-              </label>
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Email Address<span class="text-danger">*</span></label>
               <input 
                 type="email" 
-                class="form-control-toast" 
+                class="form-control form-control-lg bg-light border-0" 
                 id="email" 
                 name="email" 
-                placeholder="Email address"
+                placeholder="john@restaurant.com"
                 required
                 autocomplete="email">
-              <div class="invalid-feedback-toast" id="emailError"></div>
+              <div class="invalid-feedback" id="emailError"></div>
             </div>
 
-            <!-- Phone -->
-            <div class="form-group-toast mb-3">
-              <label for="phone" class="form-label-toast">
-                Phone number<span class="text-danger">*</span>
-              </label>
+            <!-- Phone Field -->
+            <div class="mb-3">
+              <label for="phone" class="form-label fw-bold">Phone Number<span class="text-danger">*</span></label>
               <input 
                 type="tel" 
-                class="form-control-toast" 
+                class="form-control form-control-lg bg-light border-0" 
                 id="phone" 
                 name="phone" 
-                placeholder="Phone number"
+                placeholder="(555) 123-4567"
                 required
                 autocomplete="tel">
-              <div class="invalid-feedback-toast" id="phoneError"></div>
+              <div class="invalid-feedback" id="phoneError"></div>
             </div>
 
             <!-- Restaurant Name -->
-            <div class="form-group-toast mb-3">
-              <label for="business" class="form-label-toast">
-                Restaurant name<span class="text-danger">*</span>
-              </label>
+            <div class="mb-3">
+              <label for="business" class="form-label fw-bold">Restaurant Name<span class="text-danger">*</span></label>
               <input 
                 type="text" 
-                class="form-control-toast" 
+                class="form-control form-control-lg bg-light border-0" 
                 id="business" 
                 name="business" 
-                placeholder="Restaurant name"
+                placeholder="My Awesome Restaurant"
                 required>
-              <div class="invalid-feedback-toast" id="businessError"></div>
+              <div class="invalid-feedback" id="businessError"></div>
             </div>
 
             <!-- ZIP Code -->
-            <div class="form-group-toast mb-3">
-              <label for="zipcode" class="form-label-toast">
-                Primary restaurant location zip code<span class="text-danger">*</span>
-              </label>
+            <div class="mb-3">
+              <label for="zipcode" class="form-label fw-bold">ZIP Code<span class="text-danger">*</span></label>
               <input 
                 type="text" 
-                class="form-control-toast" 
+                class="form-control form-control-lg bg-light border-0" 
                 id="zipcode" 
                 name="zipcode" 
-                placeholder="Primary restaurant location zip code"
+                placeholder="12345"
                 required
                 pattern="[0-9]{5}">
-              <div class="invalid-feedback-toast" id="zipcodeError"></div>
+              <div class="invalid-feedback" id="zipcodeError"></div>
             </div>
 
             <!-- Role Dropdown -->
-            <div class="form-group-toast mb-4">
-              <label for="type" class="form-label-toast">
-                Which best describes you?<span class="text-danger">*</span>
-              </label>
-              <select class="form-control-toast" id="type" name="type" required>
-                <option value="" selected disabled>Which best describes you?</option>
+            <div class="mb-4">
+              <label for="type" class="form-label fw-bold">I am a...<span class="text-danger">*</span></label>
+              <select class="form-select form-select-lg bg-light border-0" id="type" name="type" required>
+                <option value="" selected disabled>Select your role</option>
                 <option value="owner">Restaurant Owner</option>
                 <option value="manager">Manager</option>
                 <option value="operator">Operator</option>
                 <option value="other">Other</option>
               </select>
-              <div class="invalid-feedback-toast" id="typeError"></div>
+              <div class="invalid-feedback" id="typeError"></div>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-toast-demo w-100 py-3 fw-bold mb-3">
+            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow-sm hover-lift">
               Get a Demo
             </button>
           </form>
 
-          <!-- Success Message -->
-          <div class="form-success-message" id="successMessage" style="display: none;">
-            <div class="success-icon" style="width: 56px; height: 56px; margin: 0 auto 1rem;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="20 6 9 17 4 12"></polyline>
+          <!-- Success Message (Hidden by default) -->
+          <div class="form-success-message text-center mt-4" id="successMessage" style="display: none;">
+            <div class="text-success mb-3">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h6 class="fw-bold mb-1" style="font-size: 1rem;">Demo Scheduled!</h6>
-            <p class="mb-0" style="font-size: 0.9rem;">Redirecting to confirmation page...</p>
+            <h4 class="fw-bold text-success">Demo Scheduled!</h4>
+            <p class="text-muted">Redirecting to confirmation page...</p>
           </div>
         </div>
       </div>
